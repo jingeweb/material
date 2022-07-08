@@ -1,0 +1,10 @@
+node_modules
+/.tmp
+/.vscode
+/.idea
+**/.DS_Store
+/lib
+**/*.css
+**/*.ts
+**/*.html
+**/*.js
