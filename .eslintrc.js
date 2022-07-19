@@ -30,6 +30,7 @@ module.exports = {
     sourceType: 'module',
   },
   rules: {
+    'import/no-duplicates': 'off',
     'import/order': 'error',
     '@typescript-eslint/no-unused-vars': 'error',
     '@typescript-eslint/no-non-null-assertion': 'error',

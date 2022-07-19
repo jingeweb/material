@@ -5,27 +5,21 @@ import { getLocale, setLocale } from 'jinge-i18n';
 import { env } from './env';
 import { router } from './router';
 
-let fontCheckLocale: 'en' | 'zh_cn' | false;
-function loadFontIfNeed(locale: 'en' | 'zh_cn') {
-  if (fontCheckLocale === false) {
-    return;
-  }
-  if (locale === 'en') {
-    if (fontCheckLocale) {
-      const $s = document.createElement('link');
-      $s.rel = 'stylesheet';
-      $s.href = 'https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,700|Roboto:300,400,500,700';
-      document.head.appendChild($s);
-    }
-    fontCheckLocale = false;
-  } else {
-    fontCheckLocale = locale;
-  }
+export type TargetLocale = 'en' | 'zh_cn';
+
+function loadFontIfNeed(locale: TargetLocale) {
+  const ID = 'roboto-webfont-link';
+  if (locale !== 'en' || document.head.querySelector('#' + ID)) return;
+  const $s = document.createElement('link');
+  $s.id = ID;
+  $s.rel = 'stylesheet';
+  $s.href = 'https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,700|Roboto:300,400,500,700';
+  document.head.appendChild($s);
 }
 
-export function setCurrentLocale(targetLocale: 'en' | 'zh_cn') {
+export function setCurrentLocale(targetLocale: TargetLocale) {
   /**
-   * 首次从非英文切换到英文时，加载 Roboto 字体。
+   * 英文环境需要加载 Roboto 字体。
    */
   loadFontIfNeed(targetLocale);
   /**

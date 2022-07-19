@@ -1,0 +1,65 @@
+<!-- 
+  import {
+    PageContainer,
+    CodeBlock,
+    NoteBlock
+  } from '../../components'
+-->
+<PageContainer centered title="国际化">
+  <section class="page-container-section">
+    <h2 class="md-headline">国际化</h2>
+    <p>
+      Jinge Material 组件库没有直接依赖 jinge 框架内置的国际化方案，而是自己实现了一套国际化方案。
+      因为使用 Jinge Material 组件的项目不一定需要支持多语言。
+      接下来会分不同的情况，介绍如何使用不同语言的 Jinge Material 组件。
+    </p>
+  </section>
+  <section class="page-container-section">
+    <h2 class="md-title">使用 npm 或 yarn 包</h2>
+    <h3>项目只使用一种语言</h3>
+    <p>如果只需要支持一种语言，只需要在项目的入口文件里，加入以下的代码：</p>
+    <CodeBlock lang="ts">
+      <code>
+      import zhCN from 'jinge-material/locales/zh_cn';
+      import { setLocale } from 'jinge-material/config';
+      setLocale(zhCN);
+      </code>
+    </CodeBlock>
+    <p>Jinge Material 组件库没有默认的语言，因此必须指定语言并引入语言资源。</p>
+    <h3>项目使用多种语言</h3>
+    <p>如果需要支持多种语言，推荐一次性将项目需要支持的语言资源全部引入。这样做的好处是切换语言时不再需要额外的通过 ajax 加载资源的逻辑，并且 Jinge Material 的语言资源也很小，不会引入带宽负担。加载的资源可以存放在某个 service 中，比如：</p>
+    <CodeBlock lang="ts">
+      <code>
+      // app/service/locale.js
+      import zh_cn from 'jinge-material/locales/zh_cn';
+      import en from 'jinge-material/locales/en';
+      // ... more locales to import
+      
+      import {
+        setLocale
+      } from 'jinge-material/config';
+      
+      const locales = {
+        zh_cn,
+        en
+        // ... more locales
+      }
+      
+      export function setCurrentLocale(localeName) {
+        setLocale(locales[localeName]);
+      }
+      </code>
+    </CodeBlock>
+    <p>
+      然后将上述的 service 暴露给业务层，比如项目的入口文件设置默认语言，或者在某个按钮的点击事件中切换语言：
+    </p>
+    <CodeBlock lang="ts">
+      <code>
+      // app/entry.js
+      import { setCurrentLocale } from './service/locale.js';
+      
+      setCurrentLocale('zh_cn');
+      </code>
+    </CodeBlock>
+  </section>
+</PageContainer>

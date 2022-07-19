@@ -1,0 +1,19 @@
+<!--
+  import { NavMenu } from './nav-menu';
+  import style from './nav-menu.scss';
+-->
+<router-link active="active" e:to="_menu.state">
+  <a>
+    <span>${_menu.name}</span>
+    <if e:expect="_menu.tip">
+    <span class="tip">${_menu.tip}</span>
+    </if>
+  </a>
+</router-link>
+<if e:expect="!!_menu.children">
+<div :class="style.mainNavLevel">
+  <for e:loop="_menu.children" vm:each="_subMenu">
+  <NavMenu e:_menu="_subMenu"/>
+  </for>
+</div>
+</if>

@@ -1,5 +1,7 @@
+import { TargetLocale } from './locale';
+
 export interface Env {
-  locale: string;
+  locale: TargetLocale;
   localeKey: string;
   theme: string;
   themeKey: string;

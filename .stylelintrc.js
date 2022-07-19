@@ -4,8 +4,8 @@ module.exports = {
     'stylelint-prettier/recommended'
   ],
   rules: {
-    'selector-pseudo-element-no-unknown': [true, {
-      ignorePseudoElements: ['deep']
+    'selector-pseudo-class-no-unknown': [true, {
+      ignorePseudoClasses: ['global']
     }],
     'scss/at-import-no-partial-leading-underscore': null,
     'scss/at-import-partial-extension': null,

@@ -1,0 +1,16 @@
+.elevation-demo {
+  padding: 16px;
+  display: flex;
+  flex-wrap: wrap;
+
+  :global {
+    .md-content {
+      width: 100px;
+      height: 100px;
+      margin: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}

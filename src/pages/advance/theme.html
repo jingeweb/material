@@ -1,0 +1,85 @@
+<!-- 
+  import {
+    PageContainer,
+    CodeBlock,
+    NoteBlock
+  } from '../../components'
+-->
+<PageContainer centered title="主题">
+  <section class="page-container-section">
+    <h2 class="md-headline">主题</h2>
+    <p>
+      Jinge Material 组件库<router-link to="about">移植自 Vue Material</router-link>，但在多主题的支持上，进行了彻底地重构。主要包括两个方面：
+    </p>
+    <ul>
+      <li>完全依赖 CSS 变量（css3 variable）来实现颜色的指定和色板的切换。</li>
+      <li>完全遵循 Material Design 最新的设计规范中关于色板的规定，包括暗色主题。</li>
+    </ul>
+  </section>
+  <section class="page-container-section">
+    <h2 class="md-title">预置主题</h2>
+    <p>
+      Jinge Material 提供了 4 个预先构建好的主题，包括蓝色（default）、紫色（purple）、暗色蓝（default-dark）和暗色紫（purple-dark）。
+      构建好的主题文件位于 <code>themes</code> 目录下，使用时在 html 中或 js 中加载即可：
+    </p>
+    <CodeBlock lang="html">
+      <code>
+      &lt;link rel=&quot;stylesheet&quot; href=&quot;node_modules/jinge-material/style/themes/default.min.css&quot;/&gt;
+      </code>
+    </CodeBlock>
+    <CodeBlock lang="ts">
+      <code>
+        import 'jinge-material/style/themes/default.css';
+      </code>
+    </CodeBlock>
+  </section>
+  <section class="page-container-section">
+    <h2 class="md-title">切换主题</h2>
+    <p>
+      组件的颜色全部通过 CSS 变量引用色板中定义的颜色，因此切换主题只需要简单地替换色板文件即可。
+      从技术角度讲，替换色板本质上是替换(覆盖) CSS 变量的值。 
+    </p>
+    <p>
+      有多种方式可以实现替换（覆盖）CSS 变量的值。一种简单的方案是，在 html 中加载默认的色板时，
+      为 <code>link</code> 元素赋予 id 属性，然后在切换主题的 js 逻辑里，通过这个 id 删除旧的
+      <code>link</code> 元素，然后插入一个指向新主题色板的 css 文件的 <code>link</code> 元素。
+    </p>
+    <p>
+      当前网页的切换主题能力就是通过上述方式实现，可参看&nbsp;<a target="_blank" href="https://github.com/jingeweb/material/blob/main/src/service/theme.ts">jinge-material-site</a>&nbsp;仓库的源码。
+    </p>
+  </section>
+  <section class="page-container-section">
+    <h2 class="md-title">自定义主题</h2>
+    <p>
+      自定义主题可以通过加载自定义的主题文件（即色板文件）实现。色板里颜色的定义严格遵循 Material Design 的规范。
+      可在参考 themes 目录下构建好的色板 css 文件创建自定义色板文件，也可以参考下面的 scss 源码创建并构建色板文件：
+    </p>
+    <CodeBlock lang="sass">
+      <code>
+      @import 'jinge-material/style/themes/_elevation';
+
+      :root {
+        @include theme-elevation(false, #fff);
+
+        --md-primary: #3f51b5;
+        --md-secondary: #ff4081;
+        --md-background: #fff;
+        --md-surface: #fff;
+        --md-surface-disabled: rgba(0, 0, 0, 0.12);
+        --md-error: #b00020;
+        --md-on-primary: #fff;
+        --md-on-primary-medium: rgba(255, 255, 255, 0.74);
+        --md-on-primary-disabled: rgba(255, 255, 255, 0.38);
+        --md-on-secondary: #fff;
+        --md-on-secondary-disabled: rgba(255, 255, 255, 0.38);
+        --md-on-background: #000;
+        --md-on-surface: rgba(0, 0, 0, 0.87);
+        --md-on-surface-medium: rgba(0, 0, 0, 0.6);
+        --md-on-surface-disabled: rgba(0, 0, 0, 0.38);
+        --md-on-error: #fff;
+        --md-outline: rgba(0, 0, 0, 0.12);
+      }
+      </code>
+    </CodeBlock>
+  </section>
+</PageContainer>

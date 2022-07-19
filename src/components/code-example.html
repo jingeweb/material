@@ -1,0 +1,44 @@
+<!--
+  import style from './code-example.scss';
+  import { CodeBlock } from './code-block';
+-->
+<div :class="style.codeExample">
+  <md-toolbar class="md-dense md-primary" elevation="0">
+    <span class="md-title">${_title}</span>
+    <if e:expect="tab !== 'demo'">
+      <md-tooltip title="显示示例">
+        <md-button on:click="tab = 'demo'" class="md-icon-button md-dense md-on-primary">
+          <md-icon-code/>
+        </md-button>
+      </md-tooltip>
+    </if>
+    <md-tooltip title="显示 typescript 代码">
+      <md-button on:click="tab = 'ts'" class="md-icon-button md-dense md-on-primary">
+        ts
+      </md-button>
+    </md-tooltip>
+    <md-tooltip title="显示 html 代码">
+      <md-button on:click="tab = 'html'" class="md-icon-button md-dense md-on-primary">
+        html
+      </md-button>
+    </md-tooltip>
+    <if e:expect="_example.source.sass">
+    <md-tooltip title="显示 sass 代码">
+      <md-button on:click="tab = 'sass'" class="md-icon-button md-dense md-on-primary">
+        sass
+      </md-button>
+    </md-tooltip>
+    </if>
+  </md-toolbar>
+  <switch e:test="tab">
+    <md-content slot-pass:demo :class="style.demo">
+      <div :class="style.demoContent">
+        <dynamic e:render="{ component: _example.component }"/>
+      </div>
+    </md-content>
+    
+    <CodeBlock slot-pass:html lang="html" e:code="_example.source.html" />
+    <CodeBlock slot-pass:ts lang="ts" e:code="_example.source.ts" />
+    <CodeBlock slot-pass:sass lang="sass" e:code="_example.source.sass" />
+  </switch>
+</div>

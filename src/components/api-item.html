@@ -1,0 +1,24 @@
+<!-- import style from './api-item.scss'; -->
+<div class="api-item">
+  <h3>${_title}</h3>
+
+  <_slot />
+
+  <div :class="style.apiItemNavigation">
+    <for e:loop="_slots" vm:each="_slot" >
+    <md-button
+      class="${ currentSlot === _slot.name ? 'md-primary': '' }"
+      on:click="currentSlot = _slot.name">
+      ${ _slot.title }
+    </md-button>
+    </for>
+  </div>
+  <for e:loop="_slots" vm:each="_slot">
+  <if e:expect="currentSlot === _slot.name">
+  <div class="api-item-content">
+    <dynamic e:render="{ renderFn: _slot._render }"/>
+  </div>
+  </if>
+  </for>
+  
+</div>

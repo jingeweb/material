@@ -1,0 +1,5 @@
+<!-- import style from './note-block.scss' -->
+<div :class="['md-state-container md-selected', style.noteBlock, { alert: alert, warning: warning, tip: tip}]">
+  <div class="md-state-overlay"></div>
+  <div class="md-state-content"><_slot /></div>
+</div>

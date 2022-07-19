@@ -1,0 +1,12 @@
+.api-item-navigation {
+  :global {
+    .md-button {
+      min-width: 56px;
+      margin: 4px 0;
+    }
+
+    .md-button + .md-button {
+      margin-left: 4px;
+    }
+  }
+}
