@@ -5,8 +5,11 @@
   "main": "lib/index.js",
   "types": "src/index.ts",
   "scripts": {
-    "dev": "WATCH=true npm run build",
-    "build": "rm -rf lib && node ./scripts/esbuild.js",
+    "start": "npm run dev",
+    "dev": "webpack-dev-server --config ./webpack.config.js",
+    "dev-build": "rm -rf ./docs && webpack --config ./scripts/webpack.config.js",
+    "build": "export PROD=true && npm run build-theme && npm run dev-build",
+    "build-theme": "webpack --config ./scripts/webpack.config.theme.js",
     "eslint": "eslint './{src,compiler,scripts}/**/*.{js,ts}' --fix",
     "stylelint": "stylelint './src/**/*.scss' --fix",
     "lint": "npm run eslint && npm run stylelint",
@@ -40,6 +43,7 @@
     "@types/node": "^18.0.3",
     "@typescript-eslint/eslint-plugin": "^5.30.5",
     "@typescript-eslint/parser": "^5.30.5",
+    "css-loader": "^6.7.1",
     "esbuild": "^0.14.48",
     "esbuild-loader": "^2.19.0",
     "eslint": "^8.19.0",
@@ -47,6 +51,7 @@
     "eslint-import-resolver-typescript": "^3.2.4",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-prettier": "^4.2.1",
+    "html-minifier-terser": "7.0.0-beta.0",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
     "mini-css-extract-plugin": "^2.6.1",
@@ -65,6 +70,8 @@
     "webpack-dev-server": "^4.9.3"
   },
   "dependencies": {
+    "clipboard": "^2.0.11",
+    "highlight.js": "^11.6.0",
     "jinge": "^3.2.2",
     "jinge-compiler": "^3.2.2",
     "jinge-i18n": "^3.2.1",

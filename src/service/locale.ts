@@ -5,8 +5,10 @@ import { getLocale, setLocale } from 'jinge-i18n';
 import { env } from './env';
 import { router } from './router';
 
-let fontCheckLocale: 'en' | 'zh_cn' | false;
-function loadFontIfNeed(locale: 'en' | 'zh_cn') {
+export type TargetLocale = 'en' | 'zh_cn';
+
+let fontCheckLocale: TargetLocale | false;
+function loadFontIfNeed(locale: TargetLocale) {
   if (fontCheckLocale === false) {
     return;
   }
@@ -23,7 +25,7 @@ function loadFontIfNeed(locale: 'en' | 'zh_cn') {
   }
 }
 
-export function setCurrentLocale(targetLocale: 'en' | 'zh_cn') {
+export function setCurrentLocale(targetLocale: TargetLocale) {
   /**
    * 首次从非英文切换到英文时，加载 Roboto 字体。
    */

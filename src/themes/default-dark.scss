@@ -1,5 +1,5 @@
-@import 'style/palette';
-@import 'style/themes/default-dark';
+@import '~jinge-material/style/palette.scss';
+@import '~jinge-material/style/themes/default-dark.scss';
 
 :root {
   --demo-table-row-class-highlight: #{md-get-palette-color(lime, 200)};

@@ -1,0 +1,16 @@
+<!--
+  import style from './code-block.scss';
+-->
+<div :class="style.code-block">
+  <div :class="style.code-block-wrapper" style="max-height: ${height}px;">
+    <pre>
+      <code ref:code e:class="_lang">
+       ${_code}<_slot/>
+      </code>
+    </pre>
+  </div>
+
+  <md-button class="md-raised md-accent md-dense" ref:copy>
+  复制
+  </md-button>
+</div>

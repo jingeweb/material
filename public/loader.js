@@ -3,7 +3,7 @@
   const THEME_KEY_NAME = 'jinge-material-site.theme';
   const THEME_LINK_ID = 'jinge-material-site-theme-link';
   const SUPPORT_THEMES = ['default', 'default-dark', 'purple', 'purple-dark'];
-
+  const BASE_HREF = '{BASE_HREF}'; // BASE_HEF 会被 ../scripts/html.js 替换
   /** loader utils **/
   function loadStyle(href, id) {
     return new Promise((resolve, reject) => {
@@ -30,8 +30,9 @@
     });
   }
   function getLocale() {
-    const ps = location.pathname.split('/')[2];
-    let locale = ps[2];
+    const pn = location.pathname;
+    const pi = pn.indexOf('/', BASE_HREF.length);
+    let locale = pi > 0 ? pn.substring(BASE_HREF.length, pi) : null;
     if (locale === 'zh_cn' || locale === 'en') {
       localStorage.setItem(LOCALE_KEY_NAME, locale);
       return locale;
@@ -42,7 +43,7 @@
     } else {
       locale = 'en';
     }
-    history.replaceState(null, null, `/${ps[1]}/${locale}/`);
+    history.replaceState(null, null, `${BASE_HREF}${locale}/`);
     localStorage.setItem(LOCALE_KEY_NAME, locale);
     return locale;
   }
@@ -60,6 +61,7 @@
   }
 
   const env = {
+    baseHref: BASE_HREF,
     localeKey: LOCALE_KEY_NAME,
     themeKey: THEME_KEY_NAME,
     themeId: THEME_LINK_ID,
@@ -79,9 +81,9 @@
     env.locale === 'en'
       ? loadStyle('https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,700|Roboto:300,400,500,700')
       : Promise.resolve(),
-    loadStyle(`css/theme-${env.theme}.css`, THEME_LINK_ID),
-    loadStyle('css/index.css'),
-    loadScript('js/index.js'),
+    loadStyle(`themes/${env.theme}.css`, THEME_LINK_ID),
+    loadStyle('{STYLE_BUNDLE}'), // STYLE_BUNDLE 和 SCRIPT_BUNDLE 会被 ../scripts/html.js 替换
+    loadScript('{SCRIPT_BUNDLE}'),
   ]).catch((err) => {
     alert(`load failed with message: ${err.message || 'none'}!\nplease check console.`);
   });

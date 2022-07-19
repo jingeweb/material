@@ -13,13 +13,13 @@
     "sourceMap": true,
     "noEmit": true,
     "outDir": "lib",
-    "baseUrl": ".",
+    "baseUrl": "./",
     "paths": {
-      
+      "~service/*": ["src/service/*"],
+      "~components/*": ["src/components/*"]
     }
   },
   "include": [
-    "src/**/*",
-    "site/**/*"
+    "src/**/*"
   ]
 }
