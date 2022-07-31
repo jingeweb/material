@@ -53,11 +53,11 @@ const componentsRoute = {
     //       path: '/popconfirm',
     //       component: async () => (await import('../pages/components/popconfirm')).PagePopconfirm,
     //     },
-    //     {
-    //       name: 'components.card',
-    //       path: '/card',
-    //       component: async () => (await import('../pages/components/card')).PageCard,
-    //     },
+    {
+      name: 'components.card',
+      path: '/card',
+      component: async () => (await import('../pages/components/card')).PageCard,
+    },
     //     {
     //       name: 'components.list',
     //       path: '/list/:optional?',
@@ -79,12 +79,12 @@ const componentsRoute = {
       path: '/badge',
       component: async () => (await import('../pages/components/badge')).PageBadge,
     },
-    //     {
-    //       name: 'components.bottom-bar',
-    //       path: '/bottom-bar/:sub?',
-    //       dynamic: true,
-    //       component: async () => (await import('../pages/components/bottom-bar')).PageBottomBar,
-    //     },
+    {
+      name: 'components.bottom-bar',
+      path: '/bottom-bar/:sub?',
+      dynamic: true,
+      component: async () => (await import('../pages/components/bottom-bar')).PageBottomBar,
+    },
     //     {
     //       name: 'components.divider',
     //       path: '/divider',

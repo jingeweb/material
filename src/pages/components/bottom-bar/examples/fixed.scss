@@ -1,0 +1,14 @@
+.demo {
+  :global {
+    .phone-viewport {
+      width: 322px;
+      margin-right: 6px;
+      height: 200px;
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+      border: 1px solid rgb(0 0 0 / 26%);
+      background: rgb(0 0 0 / 6%);
+    }
+  }
+}
