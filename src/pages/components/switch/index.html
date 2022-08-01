@@ -1,0 +1,34 @@
+<!--
+  import {
+    PageContainer,
+    CodeExample,
+    ApiTable,
+    ApiItem,
+    NoteBlock
+  } from '../../../components';
+-->
+<PageContainer centered title="切换按钮">
+  <div class="page-container-section">
+    <p>
+      切换按钮可以理解成多选框的另一种展示方式，其核心逻辑和多选框完全一样。
+      因此，切换按钮也分为单一模式和数组模式，且 API 接口和多选框完全一样。
+    </p>
+  </div>
+  <div class="page-container-section">
+    <h2>切换按钮</h2>
+    <p>
+      单一模式的切换按钮，这种模式是最常见的使用模式。
+    </p>
+    <CodeExample title="Single" e:example="_examples.singleSwitch" />
+    <p>
+      数组模式的切换按钮，这种模式很少使用。典型的使用场景就是配置由个开关组成的开关分组。
+    </p>
+    <CodeExample title="Array" e:example="_examples.arraySwitch" />
+
+    <ApiItem title="API - md-switch">
+      <p slot-pass:default>
+        和 <code>md-checkbox</code> 完全一样，请参看 <code>md-checkbox</code> 的 API 文档。
+      </p>
+    </ApiItem>
+  </div>
+</PageContainer>

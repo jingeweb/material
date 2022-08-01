@@ -1,0 +1,18 @@
+.demo {
+  min-height: 300px;
+  margin: 0 30px;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid rgb(0 0 0 / 12%);
+
+  :global {
+    .md-drawer {
+      width: 230px;
+      max-width: calc(100vw - 125px);
+    }
+
+    .md-content {
+      padding: 16px;
+    }
+  }
+}

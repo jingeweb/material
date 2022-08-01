@@ -8,21 +8,21 @@ const componentsRoute = {
       path: '/button',
       component: async () => (await import('../pages/components/button')).PageButton,
     },
-    //     {
-    //       name: 'components.content',
-    //       path: '/content',
-    //       component: async () => (await import('../pages/components/content')).PageContent,
-    //     },
+    {
+      name: 'components.content',
+      path: '/content',
+      component: async () => (await import('../pages/components/content')).PageContent,
+    },
     //     {
     //       name: 'components.toolbar',
     //       path: '/toolbar',
     //       component: async () => (await import('../pages/components/toolbar')).PageToolbar,
     //     },
-    //     {
-    //       name: 'components.dialog',
-    //       path: '/dialog',
-    //       component: async () => (await import('../pages/components/dialog')).PageDialog,
-    //     },
+    {
+      name: 'components.dialog',
+      path: '/dialog',
+      component: async () => (await import('../pages/components/dialog')).PageDialog,
+    },
     //     {
     //       name: 'components.icon',
     //       path: '/icon',
@@ -69,11 +69,11 @@ const componentsRoute = {
     //       path: '/menu',
     //       component: async () => (await import('../pages/components/menu')).PageMenu,
     //     },
-    //     {
-    //       name: 'components.drawer',
-    //       path: '/drawer',
-    //       component: async () => (await import('../pages/components/drawer')).PageDrawer,
-    //     },
+    {
+      name: 'components.drawer',
+      path: '/drawer',
+      component: async () => (await import('../pages/components/drawer')).PageDrawer,
+    },
     {
       name: 'components.badge',
       path: '/badge',
@@ -85,11 +85,11 @@ const componentsRoute = {
       dynamic: true,
       component: async () => (await import('../pages/components/bottom-bar')).PageBottomBar,
     },
-    //     {
-    //       name: 'components.divider',
-    //       path: '/divider',
-    //       component: async () => (await import('../pages/components/divider')).PageDivider,
-    //     },
+    {
+      name: 'components.divider',
+      path: '/divider',
+      component: async () => (await import('../pages/components/divider')).PageDivider,
+    },
     //     {
     //       name: 'components.subheader',
     //       path: '/subheader',
@@ -116,68 +116,68 @@ const componentsRoute = {
     //       dynamic: true,
     //       component: async () => (await import('../pages/components/tabs')).PageTabs,
     //     },
-    //     {
-    //       name: 'components.forms',
-    //       path: '/forms',
-    //       redirect: 'components.forms.autocomplete',
-    //       children: [
-    //         {
-    //           name: 'components.forms.checkbox',
-    //           path: '/checkbox',
-    //           component: async () => (await import('../pages/components/checkbox')).PageCheckbox,
-    //         },
-    //         {
-    //           name: 'components.forms.radio',
-    //           path: '/radio',
-    //           component: async () => (await import('../pages/components/radio')).PageRadio,
-    //         },
-    //         {
-    //           name: 'components.forms.switch',
-    //           path: '/switch',
-    //           component: async () => (await import('../pages/components/switch')).PageSwitch,
-    //         },
-    //         {
-    //           name: 'components.forms.input',
-    //           path: '/input',
-    //           component: async () => (await import('../pages/components/input')).PageInput,
-    //         },
-    //         {
-    //           name: 'components.forms.file',
-    //           path: '/file',
-    //           component: async () => (await import('../pages/components/file')).PageFile,
-    //         },
-    //         {
-    //           name: 'components.forms.chips',
-    //           path: '/chips',
-    //           component: async () => (await import('../pages/components/chips')).PageChips,
-    //         },
-    //         {
-    //           name: 'components.forms.autocomplete',
-    //           path: '/autocomplete',
-    //           component: async () => (await import('../pages/components/autocomplete')).PageAutocomplete,
-    //         },
-    //         {
-    //           name: 'components.forms.select',
-    //           path: '/select',
-    //           component: async () => (await import('../pages/components/select')).PageSelect,
-    //         },
-    //       ],
-    //     },
+    {
+      name: 'components.forms',
+      path: '/forms',
+      redirect: 'components.forms.autocomplete',
+      children: [
+        //         {
+        //           name: 'components.forms.checkbox',
+        //           path: '/checkbox',
+        //           component: async () => (await import('../pages/components/checkbox')).PageCheckbox,
+        //         },
+        //         {
+        //           name: 'components.forms.radio',
+        //           path: '/radio',
+        //           component: async () => (await import('../pages/components/radio')).PageRadio,
+        //         },
+        //         {
+        //           name: 'components.forms.switch',
+        //           path: '/switch',
+        //           component: async () => (await import('../pages/components/switch')).PageSwitch,
+        //         },
+        //         {
+        //           name: 'components.forms.input',
+        //           path: '/input',
+        //           component: async () => (await import('../pages/components/input')).PageInput,
+        //         },
+        //         {
+        //           name: 'components.forms.file',
+        //           path: '/file',
+        //           component: async () => (await import('../pages/components/file')).PageFile,
+        //         },
+        //         {
+        //           name: 'components.forms.chips',
+        //           path: '/chips',
+        //           component: async () => (await import('../pages/components/chips')).PageChips,
+        //         },
+        {
+          name: 'components.forms.autocomplete',
+          path: '/autocomplete',
+          component: async () => (await import('../pages/components/autocomplete')).PageAutocomplete,
+        },
+        //         {
+        //           name: 'components.forms.select',
+        //           path: '/select',
+        //           component: async () => (await import('../pages/components/select')).PageSelect,
+        //         },
+      ],
+    },
     //     {
     //       name: 'components.highlight',
     //       path: '/highlight',
     //       component: async () => (await import('../pages/components/highlight')).PageHighlight,
     //     },
-    //     {
-    //       name: 'components.empty-state',
-    //       path: '/empty',
-    //       component: async () => (await import('../pages/components/empty')).PageEmptyState,
-    //     },
-    //     {
-    //       name: 'components.datepicker',
-    //       path: '/datepicker',
-    //       component: async () => (await import('../pages/components/datepicker')).PageDatepicker,
-    //     },
+    {
+      name: 'components.empty-state',
+      path: '/empty',
+      component: async () => (await import('../pages/components/empty')).PageEmptyState,
+    },
+    {
+      name: 'components.datepicker',
+      path: '/datepicker',
+      component: async () => (await import('../pages/components/datepicker')).PageDatepicker,
+    },
     //     {
     //       name: 'components.pagination',
     //       path: '/pagination',

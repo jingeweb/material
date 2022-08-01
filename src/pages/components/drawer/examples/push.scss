@@ -1,0 +1,14 @@
+:global {
+  :local(.demo) {
+    margin: 0 30px;
+    border: 1px solid rgb(0 0 0 / 12%);
+
+    .md-content {
+      padding: 16px;
+    }
+
+    &.md-active .md-content {
+      border-left: 1px solid rgb(0 0 0 / 12%);
+    }
+  }
+}

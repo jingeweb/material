@@ -1,0 +1,16 @@
+.demo {
+  :global {
+    div {
+      text-align: center;
+    }
+
+    .md-empty-state {
+      display: inline-block;
+      vertical-align: middle;
+
+      + .md-empty-state {
+        margin-left: 16px;
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+<!--
+  import {
+    PageContainer,
+    CodeExample,
+    ApiTable,
+    ApiItem,
+    NoteBlock
+  } from '../../../components';
+-->
+<PageContainer centered title="分隔线">
+  <div class="page-container-section">
+    <p>
+      分隔线是一个轻量级的细法则，用于将列表和页面布局中的内容分组，并有助于将页面内容和层次结构组织到各个图块中。
+    </p>
+    <p>
+      分隔符可用于列表中并分隔内容。它们非常适合导航面板和菜单。
+    </p>
+  </div>
+
+  <div class="page-container-section">
+    <h2>分隔线</h2>
+
+    <CodeExample title="Divider" e:example="_examples.divider" />
+
+    <ApiItem title="API - md-divider">
+      <ApiTable e:headings="api.classes.headings" e:props="api.classes.props" slot-pass:classes />
+    </ApiItem>
+  </div>
+</PageContainer>

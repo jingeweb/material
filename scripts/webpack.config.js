@@ -11,7 +11,7 @@ module.exports = {
   output: {
     filename: 'js/index.[contenthash].js',
     path: path.resolve(__dirname, '../docs'),
-    chunkFilename: 'js/[contenthash].js',
+    chunkFilename: envs.isProd ? 'js/[contenthash].js' : 'js/[name].js',
     publicPath: envs.baseHref,
   },
   devtool: envs.isProd ? false : 'source-map',

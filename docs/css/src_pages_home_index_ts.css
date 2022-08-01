@@ -1,0 +1,523 @@
+/*!********************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/.pnpm/css-loader@6.7.1_webpack@5.74.0/node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/.pnpm/sass-loader@13.0.2_sass@1.54.0+webpack@5.74.0/node_modules/sass-loader/dist/cjs.js!./src/pages/home/index.scss ***!
+  \********************************************************************************************************************************************************************************************************************************************************************/
+/**
+ * The layout system breakpoints
+ * ---
+ * @access private
+ * @type layout
+ * @group layout
+ */
+/**
+ * The available gutter sizes
+ * ---
+ * @access private
+ * @type layout
+ * @group layout
+ */
+/**
+ * Breakpoint
+ */
+/**
+ * Base
+ */
+/**
+ * Layout Item
+ */
+/**
+ * Hide Element
+ */
+.home-splash--pn4Da {
+  max-width: 1312px;
+  position: relative;
+  letter-spacing: normal;
+  font-size: 15px;
+  line-height: 1.7em;
+  margin: auto;
+}
+.home-splash--pn4Da section {
+  padding: 32px 0 48px;
+}
+
+.fork-desc--exH2e {
+  text-align: center;
+  margin-top: 120px;
+  opacity: 0.6;
+  padding: 0 12px;
+}
+.fork-desc--exH2e a {
+  color: white;
+  text-decoration: underline;
+}
+
+.home-header--ADmzZ {
+  text-align: center;
+  padding-top: 60px;
+  height: calc(100vh - 64px);
+  max-height: 660px;
+  min-height: 550px;
+}
+
+.home-logo--ZSMzH {
+  font-size: 248px;
+}
+
+.home-call--rIW5g {
+  margin-top: 24px;
+  flex: 0 0 50%;
+  font-size: 18px;
+  line-height: 1.6em;
+  padding: 0 12px;
+}
+
+.home-name--T2aap {
+  margin: 0;
+  font-size: 50px;
+  font-weight: 500;
+  line-height: 1em;
+}
+@media (max-width: 600px) {
+  .home-name--T2aap {
+    font-size: 36px;
+  }
+}
+
+.home-actions--ELFOn {
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+}
+.home-actions--ELFOn .md-button--dJnGB {
+  margin-left: 0;
+}
+
+.home-features--FukAt {
+  padding-bottom: 60px;
+  flex: none;
+}
+@media (min-width: 1690px) {
+  .home-features--FukAt {
+    margin-top: 120px;
+  }
+}
+@media (max-width: 600px) {
+  .home-features--FukAt {
+    margin-top: 60px;
+  }
+}
+
+.home-feature--eRvDw {
+  margin-bottom: 16px;
+  text-align: center;
+}
+@media (max-width: 600px) {
+  .home-feature--eRvDw {
+    text-align: center;
+  }
+}
+.home-feature--eRvDw h2 {
+  font-size: 22px;
+  font-weight: 500;
+}
+/*!*******************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/.pnpm/css-loader@6.7.1_webpack@5.74.0/node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/.pnpm/sass-loader@13.0.2_sass@1.54.0+webpack@5.74.0/node_modules/sass-loader/dist/cjs.js!./src/pages/home/home-icon-circle.scss ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************/
+/**
+ * The default transition, used when the element is visible
+ * since the beginning of the animation
+ * ---
+ * @access private
+ * @type transition
+ * @group transition
+ */
+/**
+ * The enter transition, used when the element is not visible on the screen
+ * since the beginning of the animation and become visible
+ * ---
+ * @access private
+ * @type transition
+ * @group transition
+ */
+/**
+ * The leave transition, used when the element is visible on the screen
+ * since the beginning of the animation and is removed
+ * ---
+ * @access private
+ * @type transition
+ * @group transition
+ */
+/**
+ * The stand transition, used when the element is going to accelerate,
+ * like movements from bottom to top
+ * ---
+ * @access private
+ * @type transition
+ * @group transition
+ */
+/**
+ * The out transition, used when the element is going to deaccelerate,
+ * like movements from top to bottom
+ * ---
+ * @access private
+ * @type transition
+ * @group transition
+ */
+/**
+ * The layout system breakpoints
+ * ---
+ * @access private
+ * @type layout
+ * @group layout
+ */
+/**
+ * The available gutter sizes
+ * ---
+ * @access private
+ * @type layout
+ * @group layout
+ */
+/**
+ * Breakpoint
+ */
+/**
+ * Base
+ */
+/**
+ * Layout Item
+ */
+/**
+ * Hide Element
+ */
+/**
+ * The complete material palette
+ */
+.home-icon-circle--Fue9_ {
+  width: 80px;
+  height: 100px;
+}
+.home-icon-circle--Fue9_ > div {
+  width: 80px;
+  height: 80px;
+}
+.home-icon-circle--Fue9_:hover .circle--E8E60:nth-child(2) {
+  transform: scale(0.66) translate3d(0, -75%, 0);
+}
+@media (max-width: 600px) {
+  .home-icon-circle--Fue9_:hover .circle--E8E60:nth-child(2) {
+    transform: scale(0.66) translate3d(-75%, -75%, 0);
+  }
+}
+.home-icon-circle--Fue9_:hover .circle--E8E60:nth-child(3) {
+  transform: scale(0.33) translate3d(0, -150%, 0);
+}
+@media (max-width: 600px) {
+  .home-icon-circle--Fue9_:hover .circle--E8E60:nth-child(3) {
+    transform: scale(0.33) translate3d(-150%, -150%, 0);
+  }
+}
+
+.circle--E8E60 {
+  position: absolute;
+  top: calc(50% + 10px);
+  left: 0;
+  border-radius: 100%;
+  transform: translate3d(0, -50%, 0);
+  transition: 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  will-change: transform;
+}
+@media (max-width: 600px) {
+  .circle--E8E60 {
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+  }
+}
+.circle--E8E60:nth-child(1) {
+  background: #4dd0e1;
+  transform: scale(0.98) translate3d(0, -50%, 0);
+}
+@media (max-width: 600px) {
+  .circle--E8E60:nth-child(1) {
+    transform: scale(0.98) translate3d(-50%, -50%, 0);
+  }
+}
+.circle--E8E60:nth-child(2) {
+  background: #ef5350;
+  transform: scale(0.98) translate3d(0, -50%, 0);
+}
+@media (max-width: 600px) {
+  .circle--E8E60:nth-child(2) {
+    transform: scale(0.98) translate3d(-50%, -50%, 0);
+  }
+}
+.circle--E8E60:nth-child(3) {
+  color: #f57f17;
+  background: #ffeb3b;
+}
+.circle--E8E60 .md-ripple--fnrtI {
+  border-radius: 50%;
+}
+/*!************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/.pnpm/css-loader@6.7.1_webpack@5.74.0/node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/.pnpm/sass-loader@13.0.2_sass@1.54.0+webpack@5.74.0/node_modules/sass-loader/dist/cjs.js!./src/pages/home/home-icon.scss ***!
+  \************************************************************************************************************************************************************************************************************************************************************************/
+.home-icon--oH2j7 {
+  margin-bottom: 32px;
+  display: block;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+/*!*******************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/.pnpm/css-loader@6.7.1_webpack@5.74.0/node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/.pnpm/sass-loader@13.0.2_sass@1.54.0+webpack@5.74.0/node_modules/sass-loader/dist/cjs.js!./src/pages/home/home-icon-square.scss ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************/
+/**
+ * The default transition, used when the element is visible
+ * since the beginning of the animation
+ * ---
+ * @access private
+ * @type transition
+ * @group transition
+ */
+/**
+ * The enter transition, used when the element is not visible on the screen
+ * since the beginning of the animation and become visible
+ * ---
+ * @access private
+ * @type transition
+ * @group transition
+ */
+/**
+ * The leave transition, used when the element is visible on the screen
+ * since the beginning of the animation and is removed
+ * ---
+ * @access private
+ * @type transition
+ * @group transition
+ */
+/**
+ * The stand transition, used when the element is going to accelerate,
+ * like movements from bottom to top
+ * ---
+ * @access private
+ * @type transition
+ * @group transition
+ */
+/**
+ * The out transition, used when the element is going to deaccelerate,
+ * like movements from top to bottom
+ * ---
+ * @access private
+ * @type transition
+ * @group transition
+ */
+/**
+ * The layout system breakpoints
+ * ---
+ * @access private
+ * @type layout
+ * @group layout
+ */
+/**
+ * The available gutter sizes
+ * ---
+ * @access private
+ * @type layout
+ * @group layout
+ */
+/**
+ * Breakpoint
+ */
+/**
+ * Base
+ */
+/**
+ * Layout Item
+ */
+/**
+ * Hide Element
+ */
+/**
+ * The complete material palette
+ */
+.home-icon-square--XdyVb {
+  width: 96px;
+  height: 100px;
+}
+.home-icon-square--XdyVb > div {
+  width: 80px;
+  height: 80px;
+}
+.home-icon-square--XdyVb:hover .square--Y3VEc {
+  opacity: 0.87;
+}
+.home-icon-square--XdyVb:hover .square--Y3VEc:nth-child(1) {
+  transform: translate3d(-8px, -8px, 0);
+}
+.home-icon-square--XdyVb:hover .square--Y3VEc:nth-child(3) {
+  transform: translate3d(24px, 24px, 0);
+}
+
+.square--Y3VEc {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  transition: 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  will-change: transform, opacity;
+}
+.square--Y3VEc:nth-child(1) {
+  background: #448aff;
+}
+.square--Y3VEc:nth-child(2) {
+  background: #b2ff59;
+  transform: translate3d(8px, 8px, 0);
+}
+.square--Y3VEc:nth-child(3) {
+  background: #fafafa;
+  transform: translate3d(16px, 16px, 0);
+}
+/*!********************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/.pnpm/css-loader@6.7.1_webpack@5.74.0/node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/.pnpm/sass-loader@13.0.2_sass@1.54.0+webpack@5.74.0/node_modules/sass-loader/dist/cjs.js!./src/pages/home/home-icon-devices.scss ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************/
+/**
+ * The default transition, used when the element is visible
+ * since the beginning of the animation
+ * ---
+ * @access private
+ * @type transition
+ * @group transition
+ */
+/**
+ * The enter transition, used when the element is not visible on the screen
+ * since the beginning of the animation and become visible
+ * ---
+ * @access private
+ * @type transition
+ * @group transition
+ */
+/**
+ * The leave transition, used when the element is visible on the screen
+ * since the beginning of the animation and is removed
+ * ---
+ * @access private
+ * @type transition
+ * @group transition
+ */
+/**
+ * The stand transition, used when the element is going to accelerate,
+ * like movements from bottom to top
+ * ---
+ * @access private
+ * @type transition
+ * @group transition
+ */
+/**
+ * The out transition, used when the element is going to deaccelerate,
+ * like movements from top to bottom
+ * ---
+ * @access private
+ * @type transition
+ * @group transition
+ */
+/**
+ * The layout system breakpoints
+ * ---
+ * @access private
+ * @type layout
+ * @group layout
+ */
+/**
+ * The available gutter sizes
+ * ---
+ * @access private
+ * @type layout
+ * @group layout
+ */
+/**
+ * Breakpoint
+ */
+/**
+ * Base
+ */
+/**
+ * Layout Item
+ */
+/**
+ * Hide Element
+ */
+/**
+ * The complete material palette
+ */
+.home-icon-devices--ikbLZ {
+  width: 160px;
+  height: 100px;
+}
+.home-icon-devices--ikbLZ:hover .device--HOuCn:nth-child(2) {
+  top: -30%;
+  right: -45%;
+  bottom: 65%;
+  left: 85%;
+}
+.home-icon-devices--ikbLZ:hover .device--HOuCn:nth-child(3) {
+  right: -10%;
+  left: 85%;
+}
+
+.device--HOuCn {
+  width: auto;
+  height: auto;
+  position: absolute;
+  transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: z-index, transform;
+}
+.device--HOuCn::after, .device--HOuCn::before {
+  position: absolute;
+  content: " ";
+}
+.device--HOuCn::after {
+  width: 6px;
+  height: 6px;
+  right: 3px;
+  bottom: 3px;
+  border-radius: 50%;
+  background: #f44336;
+}
+.device--HOuCn::before {
+  height: 8px;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+.device--HOuCn:nth-child(1) {
+  top: 0;
+  right: 20%;
+  bottom: 10%;
+  left: 0%;
+  z-index: 1;
+  background: #2196f3;
+}
+.device--HOuCn:nth-child(1)::before {
+  background: #1976d2;
+}
+.device--HOuCn:nth-child(2) {
+  top: 35%;
+  right: 10%;
+  bottom: 0;
+  left: 30%;
+  z-index: 2;
+  background: #26c6da;
+}
+.device--HOuCn:nth-child(2)::before {
+  background: #00acc1;
+}
+.device--HOuCn:nth-child(3) {
+  top: 45%;
+  right: 0;
+  bottom: -10%;
+  left: 75%;
+  z-index: 3;
+  background: #fafafa;
+}
+.device--HOuCn:nth-child(3)::before {
+  background: #eee;
+}
+
+/*# sourceMappingURL=src_pages_home_index_ts.css.map*/

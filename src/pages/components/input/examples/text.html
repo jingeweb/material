@@ -1,0 +1,47 @@
+<div>
+  <md-field>
+    <label>初始值</label>
+    <md-input maxlength="20" e:value="initial" on:change="initial = args[0]"></md-input>
+  </md-field>
+
+  <md-field>
+    <label>初始值（只读）</label>
+    <md-input e:value="initial" readonly></md-input>
+  </md-field>
+
+  <md-field>
+    <label>请在此处输入！</label>
+    <md-input e:value="type"></md-input>
+    <span class="md-helper-text">这是一些辅助说明的文字</span>
+  </md-field>
+
+  <md-field>
+    <label>使用标签</label>
+    <md-input e:value="withLabel" on:change="withLabel = args[0]" placeholder="可读性更高的占位信息"></md-input>
+  </md-field>
+
+  <md-field inline>
+    <label>内联样式</label>
+    <md-input e:value="inline" on:change="inline = args[0]"></md-input>
+  </md-field>
+
+  <md-field>
+    <label>输入数字</label>
+    <md-input e:value="number" on:change="number = args[0]" type="number"></md-input>
+  </md-field>
+
+  <md-field>
+    <label>可换行长文本</label>
+    <md-textarea e:value="textarea" on:change="textarea = args[0]"></md-textarea>
+  </md-field>
+
+  <md-field>
+    <label>随文本内容自动适应高度</label>
+    <md-textarea e:value="autogrow" on:change="autogrow = args[0]" autogrow></md-textarea>
+  </md-field>
+
+  <md-field>
+    <label>禁用状态</label>
+    <md-input e:value="disabled" disabled></md-input>
+  </md-field>
+</div>

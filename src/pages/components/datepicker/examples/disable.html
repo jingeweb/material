@@ -1,0 +1,18 @@
+<!-- import style from './disable.scss' -->
+<div :class="style.demo">
+  <p>
+    <div>
+      <md-datepicker
+        e:value="selectedDate"
+        disabled
+      />
+    </div>
+    <div>
+      <md-datepicker
+        e:value="selectedDate"
+        e:disabledDates="isHoliday"
+        on:confirm="selectedDate = args[0]"
+      />
+    </div>
+  </p>
+</div>

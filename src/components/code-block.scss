@@ -5,7 +5,6 @@
   max-width: 100%;
   overflow: hidden;
   position: relative;
-  background-color: #2e2e2e;
 
   + .code-block {
     margin-top: 24px;
@@ -24,7 +23,7 @@
     top: 16px;
     right: 16px;
     transition: $md-transition-stand;
-    color: rgb(255 255 255 / 38%);
+    color: var(--md-on-surface-disabled);
     content: attr(data-lang);
     font-size: 11px;
     line-height: 1em;
@@ -39,6 +38,8 @@
       right: 0;
       bottom: 0;
       opacity: 0;
+      z-index: 999;
+      color: #fff;
     }
   }
 }
@@ -52,9 +53,12 @@
   pre {
     display: flex;
     align-items: stretch;
+    margin: 0 !important;
+    border-radius: 0 !important;
 
     > code {
       opacity: 0;
+      min-width: 100%;
     }
   }
 }

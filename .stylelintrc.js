@@ -5,7 +5,7 @@ module.exports = {
   ],
   rules: {
     'selector-pseudo-class-no-unknown': [true, {
-      ignorePseudoClasses: ['global']
+      ignorePseudoClasses: ['global', 'local']
     }],
     'scss/at-import-no-partial-leading-underscore': null,
     'scss/at-import-partial-extension': null,

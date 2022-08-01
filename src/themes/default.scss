@@ -1,6 +1,6 @@
 @import '~jinge-material/style/palette.scss';
 @import '~jinge-material/style/themes/default.scss';
-@import '~prismjs/themes/prism-coy.css';
+@import '~prismjs/themes/prism.css';
 
 :root {
   --demo-table-row-class-highlight: #{md-get-palette-color(lime, 500)};

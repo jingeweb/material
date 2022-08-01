@@ -1,0 +1,12 @@
+.demo {
+  p {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  div {
+    flex: 1;
+    min-width: 120px;
+    margin: 0 6px;
+  }
+}

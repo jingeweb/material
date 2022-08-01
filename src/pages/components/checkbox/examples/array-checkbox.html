@@ -1,0 +1,39 @@
+<table>
+    <thead>
+      <tr>
+        <th>描述</th>
+        <th>示例</th>
+        <th>值</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>简单字符串数组</td>
+        <td>
+          请选择城市：
+          <for e:loop="cities" vm:each="city" _key="each">
+            <md-checkbox on:change="onSelectedCitiesChange" e:value="selectedCities" e:trueValue="city">
+            ${city}
+            </md-checkbox>
+          </for>
+        </td>
+        <td>
+          ${selectedCitiesDisplay}
+        </td>
+      </tr>
+      <tr>
+        <td>Object 数组</td>
+        <td>
+          请选择用户：
+          <for e:loop="persons" vm:each="person" _key="each.name">
+            <md-checkbox class="md-primary" on:change="onSelectedPersonsChange" e:value="selectedPersons" e:trueValue="person">
+            ${person.name}
+            </md-checkbox>
+          </for>
+        </td>
+        <td>
+          ${selectedPersonsDisplay}
+        </td>
+      </tr>
+    </tbody>
+  </table>

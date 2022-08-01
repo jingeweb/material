@@ -1,0 +1,39 @@
+<table>
+    <thead>
+      <tr>
+        <th>描述</th>
+        <th>示例</th>
+        <th>值</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>简单字符串数组</td>
+        <td>
+          城市开关：
+          <for e:loop="cities" vm:each="city" _key="each">
+            <md-switch on:change="onSelectedCitiesChange" e:value="selectedCities" e:trueValue="city">
+            ${city}
+            </md-switch>
+          </for>
+        </td>
+        <td>
+          ${selectedCitiesDisplay}
+        </td>
+      </tr>
+      <tr>
+        <td>Object 数组</td>
+        <td>
+          用户开关：
+          <for e:loop="persons" vm:each="person" _key="each.name">
+            <md-switch class="md-primary" on:change="onSelectedPersonsChange" e:value="selectedPersons" e:trueValue="person">
+            ${person.name}
+            </md-switch>
+          </for>
+        </td>
+        <td>
+          ${selectedPersonsDisplay}
+        </td>
+      </tr>
+    </tbody>
+  </table>

@@ -1,0 +1,49 @@
+<!--
+  import {
+    PageContainer,
+    CodeExample,
+    ApiTable,
+    ApiItem,
+    NoteBlock
+  } from '../../../components';
+-->
+<PageContainer centered title="日期选择器">
+  <div class="page-container-section">
+    <p>
+      日期选择器通过弹出一个对话窗口，让用户从预定日期集中选择单个日期。该组件可以禁用日期，并且非常易于使用。
+    </p>
+  </div>
+  <div class="page-container-section">
+    <h2>简单选择器</h2>
+
+    <CodeExample title="Basic" e:example="_examples.basic" />
+
+  </div>
+  <div class="page-container-section">
+    <h2>焦点时不自动打开</h2>
+    <p>
+      默认情况下，日期选择器会在输入框获取焦点时自动打开。这将使得用户无法手动输入日期。您可以禁用此行为：
+    </p>
+    <CodeExample title="With initial date selected" e:example="_examples.init" />
+  </div>
+
+  <div class="page-container-section">
+    <h2>立即选中模式</h2>
+    <p>
+      选择日期后，可以使“日期选择器”对话框立即关闭。该日期将立即被选择，而无需任何其他确认或用户操作：
+    </p>
+    <CodeExample title="Close dialog on select" e:example="_examples.immediately" />
+  </div>
+  <div class="page-container-section">
+    <h2>禁用部分日期</h2>
+    <p>
+      有时您可能需要禁用某些日期的选择。下面这个例子是只想让用户选择工作日的示例：
+    </p>
+    <CodeExample title="No weekends available" e:example="_examples.disable" />
+
+    <ApiItem title="API - md-datepicker">
+      <ApiTable e:headings="api.props.headings" e:props="api.props.props" slot-pass:props />
+      <ApiTable e:headings="api.events.headings" e:props="api.events.props" slot-pass:events />
+    </ApiItem>
+  </div>
+</PageContainer>
