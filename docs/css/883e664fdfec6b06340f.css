@@ -1,0 +1,745 @@
+.md-table {
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+  overflow: hidden;
+}
+.md-table th.md-numeric,
+.md-table td.md-numeric {
+  text-align: right;
+}
+.md-table > thead > tr > th {
+  text-align: left;
+  height: 56px;
+  padding: 14px 32px 14px 24px;
+  font-size: 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: var(--md-on-surface-medium);
+}
+.md-table > tbody > tr > td {
+  height: 48px;
+  position: relative;
+  font-size: 13px;
+  line-height: 18px;
+  padding: 6px 32px 6px 24px;
+  border-top: 1px solid;
+  border-top-color: var(--md-outline);
+}
+.md-table > tbody > tr > td > a {
+  cursor: pointer;
+}
+.md-table > tbody > tr > td > a:hover {
+  text-decoration: none;
+}
+.md-table > tbody > tr > td > a + a {
+  margin-left: 6px;
+}
+.md-table > tbody > tr:hover > td {
+  background-color: var(--md-outline);
+}
+.md-card-actions {
+  padding: 8px;
+  display: flex;
+  align-items: center;
+}
+.md-card-actions.md-alignment-right {
+  justify-content: flex-end;
+}
+.md-card-actions.md-alignment-left {
+  justify-content: flex-start;
+}
+.md-card-actions.md-alignment-space-between {
+  justify-content: space-between;
+}
+.md-card-actions .md-button {
+  margin: 0;
+}
+.md-card-actions .md-button:first-child {
+  margin-left: 0;
+}
+.md-card-actions .md-button:last-child {
+  margin-right: 0;
+}
+.md-card-actions .md-button + .md-button {
+  margin-left: 4px;
+}
+
+.md-card-area {
+  position: relative;
+}
+
+.md-card > .md-card-area:not(:last-child) {
+  position: relative;
+}
+.md-card > .md-card-area:not(:last-child)::after {
+  height: 1px;
+  position: absolute;
+  bottom: 0;
+  content: " ";
+}
+.md-card > .md-card-area:not(:last-child):not(.md-inset)::after {
+  right: 0;
+  left: 0;
+}
+.md-card > .md-card-area:not(:last-child).md-inset::after {
+  right: 16px;
+  left: 16px;
+}
+
+.md-card-content {
+  padding: 16px;
+  font-size: 14px;
+  line-height: 22px;
+}
+.md-card-content:last-of-type {
+  padding-bottom: 24px;
+}
+
+/**
+ * The default transition, used when the element is visible
+ * since the beginning of the animation
+ * ---
+ * @access private
+ * @type transition
+ * @group transition
+ */
+/**
+ * The enter transition, used when the element is not visible on the screen
+ * since the beginning of the animation and become visible
+ * ---
+ * @access private
+ * @type transition
+ * @group transition
+ */
+/**
+ * The leave transition, used when the element is visible on the screen
+ * since the beginning of the animation and is removed
+ * ---
+ * @access private
+ * @type transition
+ * @group transition
+ */
+/**
+ * The stand transition, used when the element is going to accelerate,
+ * like movements from bottom to top
+ * ---
+ * @access private
+ * @type transition
+ * @group transition
+ */
+/**
+ * The out transition, used when the element is going to deaccelerate,
+ * like movements from top to bottom
+ * ---
+ * @access private
+ * @type transition
+ * @group transition
+ */
+.md-card-expand-content {
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+  transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: opacity, margin-top;
+  will-change: opacity, margin-top;
+}
+
+/**
+ * The default transition, used when the element is visible
+ * since the beginning of the animation
+ * ---
+ * @access private
+ * @type transition
+ * @group transition
+ */
+/**
+ * The enter transition, used when the element is not visible on the screen
+ * since the beginning of the animation and become visible
+ * ---
+ * @access private
+ * @type transition
+ * @group transition
+ */
+/**
+ * The leave transition, used when the element is visible on the screen
+ * since the beginning of the animation and is removed
+ * ---
+ * @access private
+ * @type transition
+ * @group transition
+ */
+/**
+ * The stand transition, used when the element is going to accelerate,
+ * like movements from bottom to top
+ * ---
+ * @access private
+ * @type transition
+ * @group transition
+ */
+/**
+ * The out transition, used when the element is going to deaccelerate,
+ * like movements from top to bottom
+ * ---
+ * @access private
+ * @type transition
+ * @group transition
+ */
+.md-card-expand-trigger.md-icon-button {
+  transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  will-change: transform;
+}
+
+.md-card-expand {
+  overflow: hidden;
+}
+.md-card-expand .md-card-actions {
+  position: relative;
+  z-index: 2;
+}
+.md-card-expand .md-card-expand-content {
+  position: relative;
+  z-index: 1;
+}
+
+.md-card-header {
+  padding: 16px;
+}
+.md-card-header:first-child > .md-title:first-child,
+.md-card-header:first-child > .md-card-header-text > .md-title:first-child {
+  margin-top: 8px;
+}
+.md-card-header:last-child {
+  margin-bottom: 8px;
+}
+.md-card-header.md-card-header-flex {
+  display: flex;
+  justify-content: space-between;
+}
+.md-card-header + .md-card-content {
+  padding-top: 0;
+}
+.md-card-header + .md-card-actions:not(:last-child) {
+  padding: 0 8px;
+}
+.md-card-header > img {
+  border-radius: 50%;
+}
+.md-card-header > img,
+.md-card-header .md-avatar {
+  margin-right: 16px;
+  float: left;
+}
+.md-card-header > img ~ .md-title,
+.md-card-header .md-avatar ~ .md-title {
+  font-size: 14px;
+}
+.md-card-header > img ~ .md-title,
+.md-card-header > img ~ .md-subhead,
+.md-card-header .md-avatar ~ .md-title,
+.md-card-header .md-avatar ~ .md-subhead {
+  font-weight: 500;
+  line-height: 20px;
+}
+.md-card-header .md-button {
+  margin: 0;
+}
+.md-card-header .md-button:last-child {
+  margin-right: -4px;
+}
+.md-card-header .md-button + .md-button {
+  margin-left: 8px;
+}
+.md-card-header .md-card-header-text {
+  flex: 1;
+}
+.md-card-header .md-card-media {
+  width: 80px;
+  height: 80px;
+  margin-left: 16px;
+  flex: 0 0 80px;
+}
+.md-card-header .md-card-media.md-medium {
+  width: 120px;
+  height: 120px;
+  flex: 0 0 120px;
+}
+.md-card-header .md-card-media.md-big {
+  width: 160px;
+  height: 160px;
+  flex: 0 0 160px;
+}
+
+.md-card-media-actions {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+.md-card-media-actions .md-card-media {
+  max-width: 240px;
+  max-height: 240px;
+  flex: 1;
+}
+.md-card-media-actions .md-card-actions {
+  margin-left: 16px;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.md-card-media-actions .md-card-actions.md-alignment-right {
+  justify-content: flex-end;
+}
+.md-card-media-actions .md-card-actions .md-button + .md-button {
+  margin: 8px 0 0;
+}
+
+.md-card-media {
+  position: relative;
+}
+.md-card-media.md-ratio-16-9 {
+  overflow: hidden;
+}
+.md-card-media.md-ratio-16-9::before {
+  width: 100%;
+  padding-top: 56.25%;
+  display: block;
+  content: " ";
+}
+.md-card-media.md-ratio-16-9 img {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  left: 0;
+  transform: translateY(-50%);
+}
+.md-card-media.md-ratio-4-3 {
+  overflow: hidden;
+}
+.md-card-media.md-ratio-4-3::before {
+  width: 100%;
+  padding-top: 75%;
+  display: block;
+  content: " ";
+}
+.md-card-media.md-ratio-4-3 img {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  left: 0;
+  transform: translateY(-50%);
+}
+.md-card-media.md-ratio-1-1 {
+  overflow: hidden;
+}
+.md-card-media.md-ratio-1-1::before {
+  width: 100%;
+  padding-top: 100%;
+  display: block;
+  content: " ";
+}
+.md-card-media.md-ratio-1-1 img {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  left: 0;
+  transform: translateY(-50%);
+}
+.md-card-media + .md-card-header {
+  padding-top: 24px;
+}
+.md-card-media + .md-card-content:last-child {
+  padding-bottom: 16px;
+}
+.md-card-media img {
+  width: 100%;
+}
+
+/**
+ * The default transition, used when the element is visible
+ * since the beginning of the animation
+ * ---
+ * @access private
+ * @type transition
+ * @group transition
+ */
+/**
+ * The enter transition, used when the element is not visible on the screen
+ * since the beginning of the animation and become visible
+ * ---
+ * @access private
+ * @type transition
+ * @group transition
+ */
+/**
+ * The leave transition, used when the element is visible on the screen
+ * since the beginning of the animation and is removed
+ * ---
+ * @access private
+ * @type transition
+ * @group transition
+ */
+/**
+ * The stand transition, used when the element is going to accelerate,
+ * like movements from bottom to top
+ * ---
+ * @access private
+ * @type transition
+ * @group transition
+ */
+/**
+ * The out transition, used when the element is going to deaccelerate,
+ * like movements from top to bottom
+ * ---
+ * @access private
+ * @type transition
+ * @group transition
+ */
+/**
+ * The elevation transition duration
+ * ---
+ * @access private
+ * @type transition
+ * @group transition
+ */
+/**
+ * The default transition, used when the element is visible
+ * since the beginning of the animation
+ * ---
+ * @access private
+ * @type transition
+ * @group transition
+ */
+/**
+ * The enter transition, used when the element is not visible on the screen
+ * since the beginning of the animation and become visible
+ * ---
+ * @access private
+ * @type transition
+ * @group transition
+ */
+/**
+ * The leave transition, used when the element is visible on the screen
+ * since the beginning of the animation and is removed
+ * ---
+ * @access private
+ * @type transition
+ * @group transition
+ */
+/**
+ * The stand transition, used when the element is going to accelerate,
+ * like movements from bottom to top
+ * ---
+ * @access private
+ * @type transition
+ * @group transition
+ */
+/**
+ * The out transition, used when the element is going to deaccelerate,
+ * like movements from top to bottom
+ * ---
+ * @access private
+ * @type transition
+ * @group transition
+ */
+/**
+ * The elevation transition duration
+ * ---
+ * @access private
+ * @type transition
+ * @group transition
+ */
+.md-card {
+  background-color: var(--md-elevation-2);
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  position: relative;
+  z-index: 1;
+  border-radius: 2px;
+  transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: color, background-color;
+  will-change: color, background-color;
+  background-color: var(--md-background);
+}
+.md-card.md-with-hover {
+  cursor: pointer;
+  transition: background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  will-change: background-color, box-shadow;
+}
+.md-card.md-with-hover:hover {
+  z-index: 2;
+  background-color: var(--md-elevation-8);
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+.md-card.md-expand-active .md-card-expand-trigger.md-icon-button {
+  transform: rotate(180deg);
+}
+.md-card .md-subhead,
+.md-card .md-title,
+.md-card .md-subheading {
+  margin: 0;
+  font-weight: 400;
+}
+.md-card .md-subhead {
+  opacity: 0.54;
+  font-size: 14px;
+  letter-spacing: 0.01em;
+  line-height: 20px;
+}
+.md-card .md-subhead + .md-title {
+  margin-top: 4px;
+}
+.md-card .md-title {
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: 32px;
+}
+.md-card > .md-card-area::after {
+  background-color: var(--md-outline);
+}
+.md-card.md-primary {
+  background-color: var(--md-primary);
+}
+.md-card.md-primary,
+.md-card.md-primary .md-button {
+  color: var(--md-on-primary);
+}
+.md-card.md-accent {
+  background-color: var(--md-secondary);
+}
+.md-card.md-accent,
+.md-card.md-accent .md-button {
+  color: var(--md-on-secondary);
+}
+.h1Nj45_URQeGo6EFWWmz tr.highlight{color:var(--md-on-primary);background:var(--demo-table-row-class-highlight)}
+.md-pagination {
+  height: 56px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.md-pagination > .md-spinner {
+  opacity: 0.38;
+  font-size: 14px;
+}
+.md-pagination,
+.md-pagination > .md-field.md-has-value .md-input,
+.md-pagination > .md-icon-button {
+  font-size: 12px;
+}
+.md-pagination > .md-icon-button {
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  margin-right: 0;
+}
+.md-pagination > .md-icon-button .md-button-content > .md-icon {
+  margin-right: 0;
+}
+.md-pagination > .md-icon-button .md-button-content > .md-spinner:only-child {
+  font-size: 12px;
+}
+.md-pagination > .md-icon-button.num {
+  width: auto;
+}
+.md-pagination > .md-icon-button.pp .arrow {
+  display: none;
+  color: var(--md-primary);
+}
+.md-pagination > .md-icon-button.pp:hover .arrow {
+  display: inline;
+}
+.md-pagination > .md-icon-button.pp:hover .dot {
+  display: none;
+}
+.md-pagination > .md-field {
+  width: 48px;
+  min-height: auto;
+  height: 22px;
+  margin: 0;
+  padding-top: 0;
+  align-items: center;
+}
+.md-pagination > .md-field .md-field-container {
+  align-items: center;
+  position: relative;
+}
+.md-pagination > .md-field .md-input {
+  height: 22px;
+  width: 100%;
+  text-align: center;
+}
+.md-pagination > .md-field .md-icon {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+}
+.md-pagination > .md-field.options {
+  margin-right: 12px;
+}
+.md-pagination > .md-field.options .md-input {
+  margin-right: 12px;
+}
+.md-pagination > span {
+  white-space: nowrap;
+}
+/**
+ * The default transition, used when the element is visible
+ * since the beginning of the animation
+ * ---
+ * @access private
+ * @type transition
+ * @group transition
+ */
+/**
+ * The enter transition, used when the element is not visible on the screen
+ * since the beginning of the animation and become visible
+ * ---
+ * @access private
+ * @type transition
+ * @group transition
+ */
+/**
+ * The leave transition, used when the element is visible on the screen
+ * since the beginning of the animation and is removed
+ * ---
+ * @access private
+ * @type transition
+ * @group transition
+ */
+/**
+ * The stand transition, used when the element is going to accelerate,
+ * like movements from bottom to top
+ * ---
+ * @access private
+ * @type transition
+ * @group transition
+ */
+/**
+ * The out transition, used when the element is going to deaccelerate,
+ * like movements from top to bottom
+ * ---
+ * @access private
+ * @type transition
+ * @group transition
+ */
+.md-spinner {
+  width: 1em;
+  height: 1em;
+  display: inline-flex;
+}
+.md-spinner > svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  transform: rotate(-90deg);
+  transform-origin: center;
+}
+.md-spinner > svg > circle {
+  fill: none;
+  stroke: currentcolor;
+  stroke-dasharray: 138.2304px;
+  transform-origin: center;
+  transition: stroke-dashoffset 0.25s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.md-spinner.md-adjust-baseline {
+  position: relative;
+  top: 0.13em;
+}
+.md-spinner.md-primary > svg > circle {
+  stroke: var(--md-primary);
+}
+.md-spinner.md-accent > svg > circle {
+  stroke: var(--md-secondary);
+}
+.md-spinner.md-indeterminate {
+  animation: md-spinner-rotate 2s linear infinite;
+}
+.md-spinner.md-indeterminate.md-spinner-enter > svg, .md-spinner.md-indeterminate.md-spinner-leave-active > svg {
+  opacity: 0;
+  transform: scale(0.1);
+  transform-origin: center;
+  transition: 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-property: opacity, transform;
+}
+.md-spinner.md-indeterminate.md-spinner-enter.md-spinner-enter-active > svg {
+  opacity: 1;
+  transform: scale(1);
+}
+.md-spinner.md-indeterminate > svg > circle {
+  animation: 4s infinite cubic-bezier(0.25, 0.8, 0.25, 1);
+  animation-name: md-spinner-stroke-rotate;
+}
+
+@keyframes md-spinner-rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes md-spinner-stroke-rotate {
+  0% {
+    stroke-dashoffset: 131.31888px;
+    transform: rotate(0);
+  }
+  12.5% {
+    stroke-dashoffset: 27.64608px;
+    transform: rotate(0);
+  }
+  12.51% {
+    stroke-dashoffset: 27.64608px;
+    transform: rotateX(180deg) rotate(72.5deg);
+  }
+  25% {
+    stroke-dashoffset: 131.31888px;
+    transform: rotateX(180deg) rotate(72.5deg);
+  }
+  25.1% {
+    stroke-dashoffset: 131.31888px;
+    transform: rotate(270deg);
+  }
+  37.5% {
+    stroke-dashoffset: 27.64608px;
+    transform: rotate(270deg);
+  }
+  37.51% {
+    stroke-dashoffset: 27.64608px;
+    transform: rotateX(180deg) rotate(161.5deg);
+  }
+  50% {
+    stroke-dashoffset: 131.31888px;
+    transform: rotateX(180deg) rotate(161.5deg);
+  }
+  50.01% {
+    stroke-dashoffset: 131.31888px;
+    transform: rotate(180deg);
+  }
+  62.5% {
+    stroke-dashoffset: 27.64608px;
+    transform: rotate(180deg);
+  }
+  62.51% {
+    stroke-dashoffset: 27.64608px;
+    transform: rotateX(180deg) rotate(251.5deg);
+  }
+  75% {
+    stroke-dashoffset: 131.31888px;
+    transform: rotateX(180deg) rotate(251.5deg);
+  }
+  75.01% {
+    stroke-dashoffset: 131.31888px;
+    transform: rotate(90deg);
+  }
+  87.5% {
+    stroke-dashoffset: 27.64608px;
+    transform: rotate(90deg);
+  }
+  87.51% {
+    stroke-dashoffset: 27.64608px;
+    transform: rotateX(180deg) rotate(341.5deg);
+  }
+  100% {
+    stroke-dashoffset: 131.31888px;
+    transform: rotateX(180deg) rotate(341.5deg);
+  }
+}

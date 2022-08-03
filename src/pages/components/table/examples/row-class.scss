@@ -1,0 +1,6 @@
+.demo :global {
+  tr.highlight {
+    color: var(--md-on-primary);
+    background: var(--demo-table-row-class-highlight);
+  }
+}

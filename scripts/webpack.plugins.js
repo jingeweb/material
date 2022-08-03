@@ -7,6 +7,7 @@ function getPlugins() {
     new MiniCssExtractPlugin({
       filename: 'css/index.[contenthash].css',
       chunkFilename: envs.isProd ? 'css/[contenthash].css' : 'css/[name].css',
+      ignoreOrder: true,
     }),
     new GenerateHtmlPlugin(),
   ];

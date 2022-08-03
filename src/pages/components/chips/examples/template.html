@@ -1,5 +1,5 @@
 <div>
-  <md-chips on:chip-clicked="currentProject = args[0]" e:value="projects" limit="5" placeholder="Add project...">
+  <md-chips on:chip-clicked="currentProject = $args[0]" e:value="projects" limit="5" placeholder="Add project...">
     <_slot slot-pass:chip vm-use:chip>
       ${chip}
       <if e:expect="chip === currentProject">

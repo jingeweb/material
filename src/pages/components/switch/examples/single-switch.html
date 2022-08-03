@@ -1,4 +1,5 @@
-<table>
+<!-- import style from './single-switch.scss' -->
+<table :class="style.demo">
   <thead>
     <tr>
       <th>描述</th>
@@ -19,14 +20,14 @@
     <tr>
       <td>传递简单的布尔值 </td>
       <td>
-        <md-switch e:value="v1" on:change="v1 = args[0]"/>
+        <md-switch e:value="v1" on:change="v1 = $args[0]"/>
       </td>
       <td>${v1}</td>
     </tr>
     <tr>
       <td>传递简单的字符串值 </td>
       <td>
-        <md-switch class="md-primary" e:value="v2" trueValue="yes" falseValue="no" on:change="v2 = args[0]">
+        <md-switch class="md-primary" e:value="v2" trueValue="yes" falseValue="no" on:change="v2 = $args[0]">
           自动更新
         </md-switch>
       </td>
@@ -34,7 +35,7 @@
     </tr>
     <tr>
       <td>传递 Object 值 </td>
-      <td><md-switch e:value="v3" e:trueValue="s.t" e:falseValue="s.f" on:change="v3 = args[0];"/></td>
+      <td><md-switch e:value="v3" e:trueValue="s.t" e:falseValue="s.f" on:change="v3 = $args[0];"/></td>
       <td>${v3s}</td>
     </tr>
   </tbody>

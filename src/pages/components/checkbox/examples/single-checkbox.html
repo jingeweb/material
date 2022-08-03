@@ -19,14 +19,14 @@
     <tr>
       <td>传递简单的布尔值 </td>
       <td>
-        <md-checkbox e:value="v1" on:change="v1 = args[0]"/>
+        <md-checkbox e:value="v1" on:change="v1 = $args[0]"/>
       </td>
       <td>${v1}</td>
     </tr>
     <tr>
       <td>传递简单的字符串值 </td>
       <td>
-        <md-checkbox class="md-primary" e:value="v2" trueValue="yes" falseValue="no" on:change="v2 = args[0]">
+        <md-checkbox class="md-primary" e:value="v2" trueValue="yes" falseValue="no" on:change="v2 = $args[0]">
           我已阅读并同意协议
         </md-checkbox>
       </td>
@@ -34,7 +34,7 @@
     </tr>
     <tr>
       <td>传递 Object 值 </td>
-      <td><md-checkbox e:value="v3" e:trueValue="s.t" e:falseValue="s.f" on:change="v3 = args[0];"/></td>
+      <td><md-checkbox e:value="v3" e:trueValue="s.t" e:falseValue="s.f" on:change="v3 = $args[0];"/></td>
       <td>${v3s}</td>
     </tr>
     <tr>

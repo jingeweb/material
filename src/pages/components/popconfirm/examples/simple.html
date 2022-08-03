@@ -1,0 +1,31 @@
+<!-- import style from './simple.scss' -->
+<div :class="style.demo">
+  <p>
+    简单的 Popconfirm：
+    <md-popconfirm
+      on:confirm="confirm"
+      on:cancel="cancel"
+      title="您确认要删除 ${some.name} 吗？"
+    >
+      <md-button class="md-primary">
+        删除
+      </md-button>
+    </md-popconfirm>
+  </p>
+  <p>
+    配合服务器端 API 接口：
+    <md-popconfirm
+      e:active="isConfirmShown"
+      e:hideWhenConfirmClick="false"
+      e:confirmSpinner="fetching"
+      on:update.active="isConfirmShown = $args[0]"
+      on:confirm="submitDelete"
+      title="您确认要删除 ${some.name} 吗？"
+      e:errorTip="errorTip"
+    >
+      <md-button class="md-primary">
+        删除
+      </md-button>
+    </md-popconfirm>
+  </p>
+</div>

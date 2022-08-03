@@ -1,0 +1,10 @@
+.demo :global {
+  p {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .md-spinner + .md-spinner {
+    margin: 6px;
+  }
+}

@@ -1,0 +1,253 @@
+.gr0QOgVUMN4OJjP9hCEN.HqUidnqVYlIxZQQnq8d5{max-width:1100px;margin:0 auto;padding:16px;transition:.4s cubic-bezier(0.4, 0, 0.2, 1)}.gr0QOgVUMN4OJjP9hCEN .page-container-section{letter-spacing:.01em;line-height:1.6em}.gr0QOgVUMN4OJjP9hCEN .page-container-section+.page-container-section{margin-top:32px}.gr0QOgVUMN4OJjP9hCEN .page-container-section p>code,.gr0QOgVUMN4OJjP9hCEN .page-container-section li>code{padding:0 4px;display:inline-block;color:#ff5252;background:var(--md-outline);border-radius:2px;line-height:1.45em}.gr0QOgVUMN4OJjP9hCEN .page-container-section p+.code-example,.gr0QOgVUMN4OJjP9hCEN .page-container-section .md-layout-row+.code-example{margin-top:1em}
+/**
+ * The default transition, used when the element is visible
+ * since the beginning of the animation
+ * ---
+ * @access private
+ * @type transition
+ * @group transition
+ */
+/**
+ * The enter transition, used when the element is not visible on the screen
+ * since the beginning of the animation and become visible
+ * ---
+ * @access private
+ * @type transition
+ * @group transition
+ */
+/**
+ * The leave transition, used when the element is visible on the screen
+ * since the beginning of the animation and is removed
+ * ---
+ * @access private
+ * @type transition
+ * @group transition
+ */
+/**
+ * The stand transition, used when the element is going to accelerate,
+ * like movements from bottom to top
+ * ---
+ * @access private
+ * @type transition
+ * @group transition
+ */
+/**
+ * The out transition, used when the element is going to deaccelerate,
+ * like movements from top to bottom
+ * ---
+ * @access private
+ * @type transition
+ * @group transition
+ */
+/**
+ * The layout system breakpoints
+ * ---
+ * @access private
+ * @type layout
+ * @group layout
+ */
+/**
+ * The available gutter sizes
+ * ---
+ * @access private
+ * @type layout
+ * @group layout
+ */
+/**
+ * Breakpoint
+ */
+/**
+ * Base
+ */
+/**
+ * Layout Item
+ */
+/**
+ * Hide Element
+ */
+.md-popover.md-tooltip {
+  z-index: 111;
+  pointer-events: none;
+}
+.md-popover.md-tooltip > .content {
+  font-size: 10px;
+  padding: 0 8px;
+  height: 22px;
+  line-height: 22px;
+  text-transform: none;
+  white-space: nowrap;
+  color: var(--md-surface);
+  background-color: var(--md-on-surface-medium);
+}
+@media (max-width: 960px) {
+  .md-popover.md-tooltip > .content {
+    height: 32px;
+    font-size: 14px;
+    line-height: 32px;
+  }
+}
+.md-popover.md-tooltip .md-popover-enter-active {
+  transition-duration: 0.15s;
+}
+.QT3oyga3VSsDr4dD3Ubh{margin:36px 0}.QT3oyga3VSsDr4dD3Ubh>.TeR_BPUT_jma8yiUGnc1>a{margin-right:10px;cursor:pointer}.QT3oyga3VSsDr4dD3Ubh .md-toolbar .md-button{margin:0 8px;font-family:"Roboto Mono",Menlo,Monaco,"Courier New",monospace;width:38px;height:38px}.QT3oyga3VSsDr4dD3Ubh .md-title{flex:1}.LNvEB8J5VTT8kwZdZwSI{min-height:86px;padding:16px;position:relative;border:1px solid var(--md-outline);border-top:0;background-color:var(--md-elevation-8)}.mb4uPfxhQjZMQoUymXy8{position:absolute;right:0;bottom:0;z-index:40}.OeQdJJrMXZzyE6b3PELF{display:none}.FcMBVMTN8OqSoJ1GIjIb{opacity:0;transition:opacity .4s cubic-bezier(0.4, 0, 0.2, 1);will-change:opacity}.JL1eb4Z1Iw2UCvHFowjf{opacity:1}
+/**
+ * The default transition, used when the element is visible
+ * since the beginning of the animation
+ * ---
+ * @access private
+ * @type transition
+ * @group transition
+ */
+/**
+ * The enter transition, used when the element is not visible on the screen
+ * since the beginning of the animation and become visible
+ * ---
+ * @access private
+ * @type transition
+ * @group transition
+ */
+/**
+ * The leave transition, used when the element is visible on the screen
+ * since the beginning of the animation and is removed
+ * ---
+ * @access private
+ * @type transition
+ * @group transition
+ */
+/**
+ * The stand transition, used when the element is going to accelerate,
+ * like movements from bottom to top
+ * ---
+ * @access private
+ * @type transition
+ * @group transition
+ */
+/**
+ * The out transition, used when the element is going to deaccelerate,
+ * like movements from top to bottom
+ * ---
+ * @access private
+ * @type transition
+ * @group transition
+ */
+/**
+ * The layout system breakpoints
+ * ---
+ * @access private
+ * @type layout
+ * @group layout
+ */
+/**
+ * The available gutter sizes
+ * ---
+ * @access private
+ * @type layout
+ * @group layout
+ */
+/**
+ * Breakpoint
+ */
+/**
+ * Base
+ */
+/**
+ * Layout Item
+ */
+/**
+ * Hide Element
+ */
+/**
+ * The elevation transition duration
+ * ---
+ * @access private
+ * @type transition
+ * @group transition
+ */
+.md-snackbar {
+  background-color: var(--md-elevation-6);
+  box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
+  min-width: 288px;
+  max-width: 568px;
+  min-height: 48px;
+  max-height: 80px;
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  z-index: 1000;
+  border-radius: 2px;
+  background-color: var(--md-on-background);
+  color: var(--md-background);
+}
+.md-snackbar.md-position-center {
+  margin: 0 auto;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.md-snackbar.md-position-left {
+  bottom: 24px;
+  left: 24px;
+}
+@media (max-width: 600px) {
+  .md-snackbar {
+    left: 0;
+    transform: none;
+    border-radius: 0;
+  }
+}
+
+.md-snackbar-enter,
+.md-snackbar-leave {
+  transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: opacity, transform;
+  will-change: background-color, color, opacity, transform;
+}
+
+.md-snackbar-enter,
+.md-snackbar-leave.md-snackbar-leave-active {
+  opacity: 0;
+}
+.md-snackbar-enter.md-position-center,
+.md-snackbar-leave.md-snackbar-leave-active.md-position-center {
+  transform: translate3d(0, calc(100% + 8px), 0);
+}
+.md-snackbar-enter.md-position-left,
+.md-snackbar-leave.md-snackbar-leave-active.md-position-left {
+  transform: translate3d(0, calc(100% + 32px), 0);
+}
+
+.md-snackbar-enter.md-snackbar-enter-active,
+.md-snackbar-leave {
+  opacity: 1;
+}
+.md-snackbar-enter.md-snackbar-enter-active.md-position-center, .md-snackbar-enter.md-snackbar-enter-active.md-position-left,
+.md-snackbar-leave.md-position-center,
+.md-snackbar-leave.md-position-left {
+  transform: none;
+}
+
+.md-snackbar-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: opacity 0.38s cubic-bezier(0.55, 0, 0.55, 0.2);
+}
+.md-snackbar-content .md-button {
+  min-width: 0;
+  margin: -8px -8px -8px 36px;
+}
+@media (max-width: 600px) {
+  .md-snackbar-content .md-button {
+    margin-left: 12px;
+  }
+}
+.md-snackbar-content .md-button + .md-button {
+  margin-left: 16px;
+}
+.Ay8v55JkOkDJyvXIZlUa{max-width:100%;overflow:hidden;position:relative}.Ay8v55JkOkDJyvXIZlUa+.Ay8v55JkOkDJyvXIZlUa{margin-top:24px}.Ay8v55JkOkDJyvXIZlUa:hover .md-button{opacity:1}.Ay8v55JkOkDJyvXIZlUa::after{position:absolute;top:16px;right:16px;transition:.4s cubic-bezier(0.25, 0.8, 0.25, 1);color:var(--md-on-surface-disabled);content:attr(data-lang);font-size:11px;line-height:1em;text-transform:uppercase}.Ay8v55JkOkDJyvXIZlUa .md-button{min-width:56px;margin:8px;position:absolute;right:0;bottom:0;opacity:0;z-index:999;color:#fff}.XwzM1Nu218AQV8eyvIvy{min-width:100%;max-height:450px;min-height:86px;overflow:auto}.XwzM1Nu218AQV8eyvIvy pre{display:flex;align-items:stretch;margin:0 !important;border-radius:0 !important}.XwzM1Nu218AQV8eyvIvy pre>code{opacity:0;min-width:100%}
+.RSL2XDx5iih_FRFa7eRa .md-button{min-width:56px;margin:4px 0}.RSL2XDx5iih_FRFa7eRa .md-button+.md-button{margin-left:4px}
+.zYP4z1pJc9RTkyPu5rBR{padding-bottom:16px}.zYP4z1pJc9RTkyPu5rBR table{width:100%;table-layout:auto;border-collapse:collapse;border-spacing:0;font-size:13px;line-height:18px}.zYP4z1pJc9RTkyPu5rBR tr:first-child{font-weight:500;background-color:var(--md-elevation-1)}.zYP4z1pJc9RTkyPu5rBR td,.zYP4z1pJc9RTkyPu5rBR th{padding:8px 16px;border:1px solid var(--md-outline);text-align:left;vertical-align:middle}.zYP4z1pJc9RTkyPu5rBR th{color:var(--md-on-surface-medium);height:40px;line-height:23px}.zYP4z1pJc9RTkyPu5rBR th:first-child{width:22%}.zYP4z1pJc9RTkyPu5rBR th:nth-child(2)~.zYP4z1pJc9RTkyPu5rBR th:last-child{width:17%}.zYP4z1pJc9RTkyPu5rBR td.wHPuGHmupbyPydyvV_ON{padding-left:32px}.zYP4z1pJc9RTkyPu5rBR .zOhtNaKI3_k7g1cbNwQK{vertical-align:top}.zYP4z1pJc9RTkyPu5rBR .v6FfT2EHuIES6TOrKnyh{display:block}.zYP4z1pJc9RTkyPu5rBR .j6LdSwxt2q8sdpeKLmXV{color:var(--md-on-surface-disabled);text-transform:capitalize}.zYP4z1pJc9RTkyPu5rBR .dZmAFz_XmkbBF6zrqxQH{width:40%}.zYP4z1pJc9RTkyPu5rBR code{color:#ff5252}.zYP4z1pJc9RTkyPu5rBR code span{color:#448aff}.zYP4z1pJc9RTkyPu5rBR .QurX_NgV8X_qoiLLDSPX code,.zYP4z1pJc9RTkyPu5rBR .v6FfT2EHuIES6TOrKnyh code{color:#ff5252}
+.r2A7a2EC87SXe2qpG4_9{margin:1.5em 0;padding:8px 16px;overflow:hidden;border-left:4px solid #ffab40}.r2A7a2EC87SXe2qpG4_9.tGgFIeVhRdteLFSPwcgl{border-left-color:#ff5252}.r2A7a2EC87SXe2qpG4_9.umu7rhpXKjQElZekCogn{border-left-color:#69f0ae}.r2A7a2EC87SXe2qpG4_9.xn4r3qngMDJjRjYq6N31{font-size:15px}
+.s5t6S_fn9rT7qcIN6SfD p{display:flex;align-items:baseline}

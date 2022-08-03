@@ -1,4 +1,5 @@
-<table>
+<!-- import style from './simple-radios.scss' -->
+<table :class="style.demo">
     <thead>
       <tr>
         <th>描述</th>
@@ -10,8 +11,8 @@
       <tr>
         <td>简单选择项</td>
         <td>
-          <md-radio class="md-primary" value="primary" e:checked="v === 'primary'" on:change="v = args[0]" name="r-simple">Primary</md-radio>
-          <md-radio value="default" e:checked="v === 'default'" on:change="v = args[0]" name="r-simple" >Default</md-radio>
+          <md-radio class="md-primary" value="primary" e:checked="v === 'primary'" on:change="v = $args[0]" name="r-simple">Primary</md-radio>
+          <md-radio value="default" e:checked="v === 'default'" on:change="v = $args[0]" name="r-simple" >Default</md-radio>
           <md-radio class="md-primary" disabled name="r-simple" >Disabled</md-radio>
           <md-radio class="md-primary" disabled checked name="r-simple" >Disabled & Checked</md-radio>
         </td>
@@ -23,7 +24,7 @@
         <td>字符串数组</td>
         <td>
           <for e:loop="cities" vm:each="city" _key="each">
-            <md-radio name="r-city" on:change="selectedCity = args[0]" e:value="city" e:checked="city === selectedCity">
+            <md-radio name="r-city" on:change="selectedCity = $args[0]" e:value="city" e:checked="city === selectedCity">
             ${city}
             </md-radio>
           </for>

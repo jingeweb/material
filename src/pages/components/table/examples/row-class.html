@@ -1,0 +1,8 @@
+<!-- import style from './row-class.scss' -->
+<div :class="style.demo">
+  <md-table e:rowClass="getRowClass" e:data="data">
+    <md-table-column label="Framework" prop="name"/>
+    <md-table-column label="Author" prop="author"/>
+    <md-table-column numeric label="Version" prop="version"/>
+  </md-table>
+</div>

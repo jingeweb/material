@@ -3,7 +3,7 @@
   pushMode
   :class="['md-elevation-24', style.demo]"
   e:active="showNavigation"
-  on:update.active="showNavigation = args[0]"
+  on:update.active="showNavigation = $args[0]"
 >
   <_slot slot-pass:drawer>
     <md-toolbar class="md-transparent" elevation="0">

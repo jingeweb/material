@@ -1,6 +1,7 @@
 const path = require('path');
 const fs = require('fs');
 const { Compilation } = require('webpack');
+const CleanCSS = require('clean-css');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { envs } = require('./webpack.util');
 
@@ -19,6 +20,12 @@ class RemoveThemeJSPlugin {
           Object.keys(assets).forEach((file) => {
             if (file.endsWith('.css.js')) {
               delete assets[file];
+            } else if (envs.isProd && file.endsWith('.css')) {
+              const css = new CleanCSS().minify(assets[file].source()).styles;
+              assets[file] = {
+                source: () => css,
+                length: () => css.length,
+              };
             }
           });
         },

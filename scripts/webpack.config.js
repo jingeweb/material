@@ -7,6 +7,16 @@ const { getPlugins } = require('./webpack.plugins');
 
 module.exports = {
   mode: envs.isProd ? 'production' : 'development',
+  // cache: envs.isProd
+  //   ? false
+  //   : {
+  //       type: 'filesystem',
+  //       allowCollectingMemory: true,
+  //       cacheDirectory: path.resolve(__dirname, '../.tmp/.cache'),
+  //       buildDependencies: {
+  //         config: [__filename],
+  //       },
+  //     },
   entry: path.resolve(__dirname, '../src/index.ts'),
   output: {
     filename: 'js/index.[contenthash].js',

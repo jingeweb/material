@@ -2,7 +2,7 @@
   <div class="md-layout-item">
     <md-field>
       <label for="food">Food</label>
-      <md-select e:value="food1" on:change="food1 = args[0]" name="food" id="food">
+      <md-select e:value="food1" on:change="food1 = $args[0]" name="food" id="food">
         <md-optgroup label="Baked Goods">
           <md-option value="apple-pie">Apple Pie</md-option>
           <md-option value="chocolate-cake">Chocolate Cake</md-option>
@@ -27,7 +27,7 @@
   <div class="md-layout-item">
     <md-field>
       <label for="food">Food</label>
-      <md-select e:value="food2" on:change="food2 = args[0]" name="food" id="food" dense>
+      <md-select e:value="food2" on:change="food2 = $args[0]" name="food" id="food" dense>
         <md-optgroup label="Baked Goods">
           <md-option value="apple-pie">Apple Pie</md-option>
           <md-option value="chocolate-cake">Chocolate Cake</md-option>

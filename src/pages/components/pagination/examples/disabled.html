@@ -1,0 +1,14 @@
+<p>禁用整个分页组件：</p>
+<md-pagination
+  disabled
+  on:change="onPaginationChanged"
+  e:totalSize="130"
+/>
+<p>提示正在加载某页：</p>
+<md-pagination
+  on:change="onPaginationChanged"
+  e:loadingPage="4"
+  e:totalSize="130"
+  pageSizeOptions
+  useJumper
+/>

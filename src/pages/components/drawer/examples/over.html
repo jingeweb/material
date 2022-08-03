@@ -11,7 +11,7 @@
     </div>
   </md-toolbar>
 
-  <md-drawer e:active="showNavigation" on:update.active="showNavigation = args[0]">
+  <md-drawer e:active="showNavigation" on:update.active="showNavigation = $args[0]">
     <md-toolbar class="md-transparent" elevation="0">
       <span class="md-title">My App name</span>
     </md-toolbar>
@@ -39,7 +39,7 @@
     </md-list>
   </md-drawer>
 
-  <md-drawer right e:active="showSidepanel" on:update.active="showSidepanel = args[0]">
+  <md-drawer right e:active="showSidepanel" on:update.active="showSidepanel = $args[0]">
     <md-toolbar class="md-transparent" elevation="0">
       <span class="md-title">Favorites</span>
     </md-toolbar>

@@ -1,0 +1,87 @@
+<!--
+  import {
+    PageContainer,
+    CodeExample,
+    ApiTable,
+    ApiItem,
+    NoteBlock
+  } from '../../../components';
+-->
+<PageContainer centered title="表格">
+  <div class="page-container-section">
+    <p>
+      表格组件用于显示原始数据集，通常被用在桌面（而不是移动平台）产品中。表格组件支持许多属性来更改和影响布局。
+    </p>
+    <p>
+      虽然 Jinge Material 项目<router-link text="移植自 Vue Material" to="about"/>，但表格组件的接口和使用的设计，参考的是 <a href="https://element.eleme.cn/" target="_blank">Element</a> 组件库。
+    </p>
+  </div>
+  <div class="page-container-section">
+    <h2>基础表格</h2>
+    <p>
+      表格由 <code>md-table</code> 和 <code>md-table-column</code> 两个组件构成。前者用于创建表格，后者用于在表格内定义每一列。
+    </p>
+    <CodeExample title="Basic" e:example="_examples.basic" />
+  </div>
+  <div class="page-container-section">
+    <h2>在卡片中的带工具栏的表格</h2>
+    <p>
+      表格可以和其它组件搭配使用，比如添加工具栏并放置在卡片中：
+    </p>
+    <CodeExample title="Card" e:example="_examples.card" />
+  </div>
+  <div class="page-container-section">
+    <h2>可选模式</h2>
+    <p>
+      表格可开启可选择模式，该模式下可以通过 Checkbox 来选择行数据。
+    </p>
+    <CodeExample title="Selection" e:example="_examples.selection" />
+  </div>
+  <div class="page-container-section">
+    <h2>自定义模版</h2>
+    <p>
+      可以通过为 <code>md-table-column</code> 指定 slot 来使用自定义模版。
+      其中，传送默认的 slot，可指定表格内容(td)模版；传递 head slot，可指定表头(th)的模版。
+    </p>
+    <p>
+      表头 slot 用于渲染每一个表头，可使用的数据包括 column 和 columnIndex。
+      表格内容 slot 用于渲染每一行的每一个单元格，可使用的数据包括：
+    </p>
+    <ul>
+      <li><code>data</code>: 单元格对应的行数据。</li>
+      <li><code>index</code>: 单元格对应的行的索引。</li>
+      <li><code>selected</code>: 单元格对应的行是否被选中。只在表格开启可选模式下有用。</li>
+      <li><code>column</code>: 单元格对应的列。</li>
+      <li><code>columnIndex</code>: 单元格对应的列的索引。</li>
+    </ul>
+    <CodeExample title="Template" e:example="_examples.template" />
+  </div>
+  <div class="page-container-section">
+    <h2>行的自定义样式</h2>
+    <p>
+      如果表格的某一行需要有特别的样式，可以通过 <code>rowClass</code> 属性为该行指定额外的样式类。
+      这个属性必须指定为函数，函数接收行数据，返回样式类。
+    </p>
+    <CodeExample title="Row class" e:example="_examples.rowClass" />
+  </div>
+  <div class="page-container-section">
+    <h2>分页</h2>
+    <p>
+      表格的分页需要使用分页组件来配合实现：
+    </p>
+    <CodeExample title="Pagination" e:example="_examples.pagination" />
+    
+    <ApiItem title="API - md-table">
+      <ApiTable e:headings="api.table.props.headings" e:props="api.table.props.props" slot-pass:props />
+      <ApiTable e:headings="api.table.events.headings" e:props="api.table.events.props" slot-pass:events />
+    </ApiItem>
+
+    <p>
+      TODO: 实现包括固定表头，排序等更多丰富的功能。
+    </p>
+
+    <ApiItem title="API - md-table-column">
+      <ApiTable e:headings="api.column.headings" e:props="api.column.props" slot-pass:props />
+    </ApiItem>
+  </div>
+</PageContainer>

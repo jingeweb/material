@@ -1,0 +1,28 @@
+<!--
+  import {
+    PageContainer,
+    CodeExample,
+    ApiTable,
+    ApiItem,
+    NoteBlock
+  } from '../../../components';
+-->
+<PageContainer centered title="工具提示">
+  <div class="page-container-section">
+    <p>
+      工具提示用于在鼠标悬停时会展示提示信息，提示信息可能包含有关其功能的简短说明，也可以是更丰富的 HTML 信息。
+    </p>
+  </div>
+
+  <div class="page-container-section">
+    <h2>工具提示</h2>
+    <CodeExample title="Tooltip" e:example="_examples.simple" />
+
+    <ApiItem title="API - md-tooltip">
+      <NoteBlock tip slot-pass:default>
+        Popover 组件的所有 API 也可用于 Tooltip 组件。但部分属性的默认值不同。
+      </NoteBlock>
+      <ApiTable e:headings="api.props.headings" e:props="api.props.props" slot-pass:props />
+    </ApiItem>
+  </div>
+</PageContainer>

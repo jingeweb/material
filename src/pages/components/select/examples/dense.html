@@ -3,7 +3,7 @@
     <div class="md-layout-item">
       <md-field>
         <label for="movie">Movie</label>
-        <md-select dense e:value="selectedMovie" on:change="selectedMovie = args[0]" name="movie" id="movie">
+        <md-select dense e:value="selectedMovie" on:change="selectedMovie = $args[0]" name="movie" id="movie">
           <md-option value="fight-club">Fight Club</md-option>
           <md-option value="godfather">Godfather</md-option>
           <md-option value="godfather-ii">Godfather II</md-option>
@@ -17,7 +17,7 @@
 
     <div class="md-layout-item">
       <md-field>
-        <md-select dense alignTrigger fullWidth e:value="selectedCountry" on:change="selectedCountry = args[0]" name="country" id="country" placeholder="Country">
+        <md-select dense alignTrigger fullWidth e:value="selectedCountry" on:change="selectedCountry = $args[0]" name="country" id="country" placeholder="Country">
           <for e:loop="allCountries" key="each" vm:each="country">
           <md-option e:value="country"/>
           </for>
