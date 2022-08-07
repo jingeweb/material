@@ -56,7 +56,7 @@ export default () =>
           {
             name: 'id',
             type: 'String',
-            description: '唯一标识，可用于和 activeStep 属性配合指定当前激活步骤',
+            description: '唯一标识，可用于和 activeStep 属性配合指定当前激活步骤',
             defaults: 'a random string',
           },
           {
@@ -68,7 +68,7 @@ export default () =>
           {
             name: 'description',
             type: 'String',
-            description: '步骤的描述文本。如果某个步骤是可选的，请使用此属性说明。',
+            description: '步骤的描述文本。如果某个步骤是可选的，请使用此属性说明。',
             defaults: 'null',
           },
           {

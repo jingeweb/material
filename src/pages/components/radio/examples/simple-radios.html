@@ -43,7 +43,10 @@
           </for>
         </td>
         <td>
-          ${selectedPerson ? selectedPerson.name : '未选择'}
+          <if e:expect="selectedPerson">
+            <_slot slot-pass:default>${selectedPerson.name}</_slot>
+            <_slot slot-pass:else>未选择</_slot>
+          </if>
         </td>
       </tr>
     </tbody>

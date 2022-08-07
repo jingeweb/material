@@ -1,4 +1,4 @@
-/*! jinge-i18n-ignore */
+/*! @jinge-i18n-ignore */
 const locales = [
   {
     locale: 'zh_cn',
