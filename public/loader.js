@@ -1,4 +1,10 @@
 (function () {
+  // 处理 404.html 跳转过来的 url。刷新网页时，github 并不能支持 html5 模式的静态路由，会访问到 404.html，再从 404 跳过来恢复 url。
+  const urlParams = new URLSearchParams(location.search);
+  const redirectUrl = urlParams.get('__git_pages_redirect');
+  redirectUrl && history.replaceState(null, null, redirectUrl);
+})();
+(function () {
   const LOCALE_KEY_NAME = 'jinge-material-site.locale';
   const THEME_KEY_NAME = 'jinge-material-site.theme';
   const THEME_LINK_ID = 'jinge-material-site-theme-link';
@@ -70,12 +76,6 @@
   };
   window.I18N_DEFAULT_LOCALE = env.locale;
   window.__env__ = env;
-
-  /** run application **/
-  if (location.search.startsWith('?__git_pages_redirect=')) {
-    const redirectPath = decodeURIComponent(location.search.substring(22));
-    history.replaceState(null, null, redirectPath);
-  }
 
   Promise.all([
     // env.locale === 'en'

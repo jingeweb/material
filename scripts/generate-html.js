@@ -16,6 +16,7 @@ async function generateHtml(jsfile, cssfile) {
     .replace('{SCRIPT_BUNDLE}', jsfile)
     .replace('{BASE_HREF}', envs.baseHref);
   htmlCnt = htmlCnt.replace('</body>', `<script>\n${jsCnt}\n</script></body>`);
+  htmlCnt = htmlCnt.replace('<base href="/"/>', `<base href="${envs.baseHref}"/>`);
   if (envs.isProd) {
     htmlCnt = await minify(htmlCnt, {
       collapseWhitespace: true,
@@ -37,6 +38,7 @@ class GenerateHtmlPlugin {
             execSync(`mkdir -p ${r('../docs/' + d)}`);
             execSync(`cp -r ${r('../public/' + d + '/*')} ${r('../docs/' + d)}`);
           });
+          execSync(`cp -r ${r('../public/404.html')} ${r('../public/.nojekyll')} ${r('../docs')}`);
           copyAssets = true;
         }
         const files = Object.keys(compilation.assets);
