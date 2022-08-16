@@ -1,0 +1,157 @@
+/**
+ * The default transition, used when the element is visible
+ * since the beginning of the animation
+ * ---
+ * @access private
+ * @type transition
+ * @group transition
+ */
+/**
+ * The enter transition, used when the element is not visible on the screen
+ * since the beginning of the animation and become visible
+ * ---
+ * @access private
+ * @type transition
+ * @group transition
+ */
+/**
+ * The leave transition, used when the element is visible on the screen
+ * since the beginning of the animation and is removed
+ * ---
+ * @access private
+ * @type transition
+ * @group transition
+ */
+/**
+ * The stand transition, used when the element is going to accelerate,
+ * like movements from bottom to top
+ * ---
+ * @access private
+ * @type transition
+ * @group transition
+ */
+/**
+ * The out transition, used when the element is going to deaccelerate,
+ * like movements from top to bottom
+ * ---
+ * @access private
+ * @type transition
+ * @group transition
+ */
+/**
+ * The elevation transition duration
+ * ---
+ * @access private
+ * @type transition
+ * @group transition
+ */
+.md-switch {
+  width: auto;
+  margin: 16px 16px 16px 0;
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+}
+.md-switch:not(.md-disabled) {
+  cursor: pointer;
+}
+.md-switch:not(.md-disabled) .md-switch-label {
+  cursor: pointer;
+}
+.md-switch .md-switch-container {
+  width: 34px;
+  min-width: 34px;
+  height: 14px;
+  position: relative;
+}
+.md-switch .md-switch-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.38;
+  z-index: 0;
+  border-radius: 14px;
+  transition: 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  background-color: var(--md-on-surface-disabled);
+}
+.md-switch .md-switch-thumb {
+  background-color: var(--md-elevation-1);
+  box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  z-index: 99;
+  left: 0;
+  top: 50%;
+  border-radius: 50%;
+  transition: 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  background-color: var(--md-on-surface-medium);
+  transform: translate3d(0, -50%, 0);
+}
+.md-switch .md-switch-thumb::before {
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 11;
+  transform: translate(-50%, -50%);
+  content: " ";
+}
+.md-switch .md-switch-thumb .md-ripple {
+  width: 48px !important;
+  height: 48px !important;
+  top: 50% !important;
+  left: 50% !important;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+.md-switch .md-switch-thumb input {
+  position: absolute;
+  left: -999em;
+}
+.md-switch .md-switch-label {
+  height: 20px;
+  padding-left: 16px;
+  position: relative;
+  line-height: 20px;
+}
+
+.md-switch.md-checked .md-switch-container::before {
+  background-color: var(--md-secondary);
+}
+.md-switch.md-checked .md-switch-thumb {
+  transform: translate3d(15px, -50%, 0);
+  background-color: var(--md-secondary);
+}
+.md-switch.md-checked .md-ripple {
+  color: var(--md-secondary);
+}
+.md-switch.md-checked.md-primary .md-switch-container::before,
+.md-switch.md-checked.md-primary .md-switch-thumb {
+  background-color: var(--md-primary);
+}
+.md-switch.md-checked.md-primary .md-ripple {
+  color: var(--md-primary);
+}
+
+.md-switch.md-required label::after {
+  position: absolute;
+  top: 2px;
+  right: 0;
+  transform: translateX(calc(100% + 2px));
+  content: "*";
+  line-height: 1em;
+  vertical-align: top;
+}
+
+.md-switch.md-disabled {
+  opacity: 0.38;
+}
+.ps_9j3cK89EGGsdnpQCf .md-field:last-child{margin-bottom:40px}
+.VifpLfxuKUVuwzUTStS6 .md-field:last-child{margin-bottom:40px}
+.qPUm911opkTxlaARTbD1 .md-field:last-child{margin-bottom:40px}
