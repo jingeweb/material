@@ -1,17 +1,25 @@
-@import '~jinge-material/style/animation/variables.scss';
+@import '~jinge-material/style/animation.scss';
 @import '~jinge-material/style/layout/mixins.scss';
-@import '~jinge-material/style/palette.scss';
 
 .home-icon-devices {
-  width: 160px;
-  height: 100px;
+  > div {
+    width: 160px;
+    height: 100px;
+  }
 
-  &:hover .device {
+  > div:hover .device {
+    &:nth-child(1) {
+      top: 0;
+      right: 30%;
+      bottom: 10%;
+      left: -10%;
+    }
+
     &:nth-child(2) {
-      top: -30%;
-      right: -45%;
-      bottom: 65%;
-      left: 85%;
+      top: -15%;
+      right: -35%;
+      bottom: 55%;
+      left: 70%;
     }
 
     &:nth-child(3) {
@@ -40,7 +48,7 @@
     right: 3px;
     bottom: 3px;
     border-radius: 50%;
-    background: md-get-palette-color(red, 500);
+    background-color: var(--md-color-error);
   }
 
   &::before {
@@ -56,10 +64,10 @@
     bottom: 10%;
     left: 0%;
     z-index: 1;
-    background: md-get-palette-color(blue, 500);
+    background-color: #2196f3;
 
     &::before {
-      background: md-get-palette-color(blue, 700);
+      background-color: #1976d2;
     }
   }
 
@@ -69,10 +77,10 @@
     bottom: 0;
     left: 30%;
     z-index: 2;
-    background: md-get-palette-color(cyan, 400);
+    background-color: #26c6da;
 
     &::before {
-      background: md-get-palette-color(cyan, 600);
+      background-color: #00acc1;
     }
   }
 
@@ -82,10 +90,10 @@
     bottom: -10%;
     left: 75%;
     z-index: 3;
-    background: md-get-palette-color(grey, 50);
+    background-color: #fafafa;
 
     &::before {
-      background: md-get-palette-color(grey, 200);
+      background-color: #eee;
     }
   }
 }

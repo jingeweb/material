@@ -1,16 +1,14 @@
 <!--
   import style from './app.scss';
-  import { Header, Nav, Footer } from '../layout';
+  import { Sidebar } from '../layout/sidebar';
 -->
-<div :class="[style.container, isSplash && style.splash]">
-  <Header e:title="appTitle" on:toggle-menu="menuShown = !menuShown;" e:isSplash="isSplash"/>
-
-  <div :class="[style.containerWrapper, 'md-layout-row', isSplash && style.splash]">
-    <Nav on:hide-menu="menuShown = false;" e:menuShown="menuShown" e:isSplash="isSplash"/>
-
-    <router-view doc="after">
-      <!-- <p>loading...</p> -->
-    </router-view>
-    <Footer e:hide="hideFooter" :isSplash="isSplash"/>
-  </div>
+<Sidebar />
+<div :class="style.container">
+  <h1 class="md-title-large">测试</h1>
+  <p>
+    Hello, hello world.Hello, hello world.Hello, hello world.Hello, hello world.Hello, hello world.Hello, hello world.Hello, hello world.Hello, hello world.
+    Hello, hello world.Hello, hello world.Hello, hello world.Hello, hello world.Hello, hello world.Hello, hello world.Hello, hello world.Hello, hello world.
+    Hello, hello world.Hello, hello world.Hello, hello world.Hello, hello world.Hello, hello world.Hello, hello world.Hello, hello world.Hello, hello world.
+  </p>
+  <router-view doc="after"/>
 </div>

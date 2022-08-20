@@ -6,9 +6,7 @@
 -->
 <div :class="style.homeSplash">
   <header :class="style.homeHeader">
-    <div :class="style.homeLogo">
-      <md-icon class="jinge-material-site-logo" src="assets/logo_nc.svg"/>
-    </div>
+    <md-icon :class="style.homeLogo" src="assets/logo_nc.svg"/>
   
     <div :class="style.homeCall">
       <h1 :class="style.homeName">Jinge Material</h1>
@@ -16,12 +14,34 @@
       <p>构建在 Jinge 框架上的 Material Design 组件库</p>
   
       <div :class="style.homeActions">
-        <md-button class="md-button-spaced md-plain md-raised" to="getting-started">
+        <md-button to="getting-started">
           快速上手
         </md-button>
-        <md-button class="md-button-spaced md-plain md-raised" to="components">
+        <md-button to="components">
           浏览组件
         </md-button>
+        <!-- <md-menu>
+          <md-icon-button slot-pass:default>
+            <md-ic-menu />
+          </md-icon-button>
+          <_slot slot-pass:content>
+            <md-menu-item>
+              <md-ic-favorite/>
+              Hello
+            </md-menu-item>
+            <md-menu-item>
+              <i class="md-space" />
+              Hello
+            </md-menu-item>
+            <md-menu-item>
+              Hello
+              <span class="md-trailing">⌘C</span>
+            </md-menu-item>
+            <md-menu-divider />
+            <md-menu-item>Hello</md-menu-item>
+            <md-menu-item>Hello</md-menu-item>
+          </_slot>
+        </md-menu> -->
       </div>
     </div>
     <!-- <p class="fork-desc">
@@ -33,23 +53,23 @@
       </span>
     </p> -->
   </header>
-  <section :class="[style.homeFeatures, 'md-layout md-gutter md-layout-wrap']">
-    <div :class="[style.homeFeature, 'md-layout-item md-small-size-100']">
+  <section :class="style.homeFeatures">
+    <md-card type="filled" :class="style.homeFeature">
       <HomeIconSquare />
-      <h2 class="md-title">Material Design</h2>
-      <p>精准实现 Google Material Design 设计规范。</p>
-    </div>
+      <h2 class="md-title">M3 规范</h2>
+      <p>精准实现 Google Material Design 3 设计规范。</p>
+    </md-card>
   
-    <div :class="[style.homeFeature, 'md-layout-item md-small-size-100']">
+    <md-card type="filled" :class="style.homeFeature">
       <HomeIconDevices />
-      <h2 class="md-title">Compatible</h2>
+      <h2 class="md-title">响应式</h2>
       <p>适配所有主流的现代浏览器，支持移动设备的响应式。</p>
-    </div>
+    </md-card>
   
-    <div :class="[style.homeFeature, 'md-layout-item md-small-size-100']">
+    <md-card type="filled" :class="style.homeFeature">
       <HomeIconCircle />
-      <h2 class="md-title">Full-featured</h2>
-      <p>支持多皮肤主题，国际化多语言等丰富全面的功能。</p>
-    </div>
+      <h2 class="md-title">多功能</h2>
+      <p>支持多皮肤、深浅主题、多语言等丰富全面的功能。</p>
+    </md-card>
   </section>
 </div>

@@ -1,8 +1,5 @@
 import { Attributes, Component } from 'jinge';
-
-import { watchForComponent } from 'jinge-i18n';
 import _tpl from './index.html';
-import apis from './apis';
 
 import Basic from './examples/basic';
 import sourceBasic from './examples/basic?example';
@@ -17,13 +14,6 @@ export class PageStates extends Component {
   constructor(attrs: Attributes) {
     super(attrs);
 
-    watchForComponent(
-      this,
-      () => {
-        this.api = apis();
-      },
-      true,
-    );
     this._examples = {
       basic: {
         component: Basic,

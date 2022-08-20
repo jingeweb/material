@@ -1,4 +1,4 @@
-import { Attributes, Component } from 'jinge';
+import { Attributes, Component, vm } from 'jinge';
 import { watchForComponent } from 'jinge-i18n';
 import _tpl from './index.html';
 import apis from './api';
@@ -15,13 +15,7 @@ export class PageContent extends Component {
 
   constructor(attrs: Attributes) {
     super(attrs);
-    watchForComponent(
-      this,
-      () => {
-        this.api = apis();
-      },
-      true,
-    );
+    watchForComponent(this, () => (this.api = vm(apis())), true);
     this._examples = {
       paperContent: {
         component: PaperContent,

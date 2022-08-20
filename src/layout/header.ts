@@ -1,41 +1,41 @@
 import { Attributes, Component, vm } from 'jinge';
-import { getLocale, watchForComponent } from 'jinge-i18n';
-import { setCurrentLocale, setCurrentTheme, TargetLocale } from '../service';
-
-import './header.global.scss';
+import { getLocale } from 'jinge-i18n';
+import { env, setCurrentLocale, setCurrentTheme, TargetLocale } from '../service';
 
 import _tpl from './header.html';
 import locales from './locales';
 
-type Theme = { theme: string; name: string };
-function getThemes(): Theme[] {
-  return [
-    {
-      theme: 'default',
-      name: '默认蓝',
-    },
-    {
-      theme: 'default-dark',
-      name: '暗夜蓝',
-    },
-    {
-      theme: 'purple',
-      name: '炫酷紫',
-    },
-    {
-      theme: 'purple-dark',
-      name: '暗夜紫',
-    },
-  ];
-}
+type Theme = { theme: string; color: string };
+const Themes: Theme[] = vm([
+  {
+    theme: 'purple',
+    color: '#6750a4',
+  },
+  {
+    theme: 'blue',
+    color: '#0856cf',
+  },
+  {
+    theme: 'red',
+    color: '#c00006',
+  },
+  {
+    theme: 'green',
+    color: '#3c6a1c',
+  },
+]);
+
 export class Header extends Component {
   static template = _tpl;
 
   isSplash: boolean;
   title: string;
   _locales: typeof locales;
+  scrolled: boolean;
   locale: string;
   themes: Theme[];
+  curTheme: Theme;
+  darkMode: boolean;
 
   constructor(
     attrs: Attributes<{
@@ -47,14 +47,11 @@ export class Header extends Component {
     this.isSplash = attrs.isSplash;
     this.title = attrs.title;
     this._locales = locales;
-    watchForComponent(
-      this,
-      () => {
-        this.themes = vm(getThemes());
-      },
-      true,
-    );
+    this.themes = Themes;
     this.locale = locales.find((l) => l.locale === getLocale()).name;
+    const ts = env.theme.split('.');
+    this.curTheme = Themes.find((t) => t.theme === ts[0]);
+    this.darkMode = ts[1] === 'dark';
   }
 
   toggleMenu() {
@@ -66,7 +63,23 @@ export class Header extends Component {
     setCurrentLocale(loc.locale);
   }
 
-  changeTheme(theme: string) {
-    setCurrentTheme(theme);
+  changeTheme(theme: Theme) {
+    this.curTheme = theme;
+    this._updateTheme();
+  }
+
+  toggleDarkMode() {
+    this.darkMode = !this.darkMode;
+    this._updateTheme();
+  }
+
+  _updateTheme() {
+    setCurrentTheme(`${this.curTheme.theme}.${this.darkMode ? 'dark' : 'light'}`);
+  }
+
+  __afterRender() {
+    this.__domAddListener(document, 'scroll', () => {
+      this.scrolled = document.documentElement.scrollTop > 4;
+    });
   }
 }

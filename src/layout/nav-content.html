@@ -1,9 +1,6 @@
 <!--
-  import style from './nav-content.scss';
   import { NavMenu } from './nav-menu';
 -->
-<div :class="style.mainNavContent">
 <for e:loop="menus" key="each.key" vm:each="_menu">
   <NavMenu e:_menu="_menu"/>
 </for>
-</div>

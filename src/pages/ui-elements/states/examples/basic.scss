@@ -1,11 +1,10 @@
 .states-demo {
-  background: var(--demo-states-background);
   padding: 16px;
   display: flex;
   flex-wrap: wrap;
 
   :global {
-    .md-state-container {
+    .md-container {
       width: 200px;
       height: 200px;
       margin: 24px;

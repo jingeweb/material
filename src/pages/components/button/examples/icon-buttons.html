@@ -1,50 +1,29 @@
-<div>
-  <div>
-    <small>Flat</small>
-    <md-button class="md-icon-button">
-      <md-icon-3d_rotation/>
-    </md-button>
-
-    <md-button class="md-icon-button md-primary">
-      <md-icon-menu/>
-    </md-button>
-
-    <md-button class="md-icon-button md-accent">
-      <md-icon-thumb_up/>
-    </md-button>
-
-    <md-button class="md-icon-button" disabled>
-      <md-icon-add/>
-    </md-button>
-  </div>
-
-  <div>
-    <small>Raised</small>
-    <md-button class="md-icon-button md-raised">
-      <md-icon-home/>
-    </md-button>
-
-    <md-button class="md-icon-button md-raised md-primary">
-      <md-icon-menu/>
-    </md-button>
-
-    <md-button class="md-icon-button md-raised md-accent">
-      <md-icon-thumb_up/>
-    </md-button>
-
-    <md-button class="md-icon-button md-raised" disabled>
-      <md-icon-add/>
-    </md-button>
-  </div>
-
-  <div>
-    <small>Dense</small>
-    <md-button class="md-icon-button md-dense md-primary">
-      <md-icon-person/>
-    </md-button>
-
-    <md-button class="md-icon-button md-dense md-raised md-primary">
-      <md-icon-cached/>
-    </md-button>
-  </div>
+<!-- import style from './common-buttons.scss' -->
+<div :class="style.demo">
+  <md-icon-button>
+    <md-ic-thumb_up/>
+  </md-icon-button>
+  <md-icon-button type="filled">
+    <md-ic-thumb_up/>
+  </md-icon-button>
+  <md-icon-button type="filled-tonal">
+    <md-ic-thumb_up/>
+  </md-icon-button>
+  <md-icon-button type="outlined">
+    <md-ic-thumb_up/>
+  </md-icon-button>
+  <small>Toggle</small>
+  <md-icon-button toggle :selected="selected" on:click="selected = !selected">
+    <md-ic-thumb_up/>
+  </md-icon-button>
+  <md-icon-button type="filled" toggle :selected="!selected" on:click="selected = !selected">
+    <md-ic-thumb_up/>
+  </md-icon-button>
+  <md-icon-button type="outlined" toggle :selected="selected" on:click="selected = !selected">
+    <md-ic-thumb_up/>
+  </md-icon-button>
+  <small>Loading</small>
+  <md-icon-button :loading="loading" on:click="search">
+    <md-ic-search />
+  </md-icon-button>
 </div>

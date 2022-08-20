@@ -1,8 +1,8 @@
 import { Attributes, Component } from 'jinge';
 
-import _tpl from './regular-buttons.html';
+import _tpl from './common-buttons.html';
 
-export default class ExampleRegularButtons extends Component {
+export default class ExampleCommonButtons extends Component {
   static template = _tpl;
 
   loading: boolean;
@@ -17,7 +17,7 @@ export default class ExampleRegularButtons extends Component {
     console.log('click button', evt);
   }
 
-  load() {
+  search() {
     this.loading = true;
     setTimeout(() => {
       this.loading = false;

@@ -1,58 +1,67 @@
-@import '~jinge-material/style/animation/variables.scss';
+@import '~jinge-material/style/animation.scss';
 @import '~jinge-material/style/layout/mixins.scss';
 
 .main-nav {
   width: 230px;
-  padding: 24px 16px 112px;
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
+  padding: 24px 4px 12px;
   overflow: auto;
   position: fixed;
   top: 64px;
   bottom: 0;
   left: 0;
-  transition: 0.3s $md-transition-default-timing;
-  transition-property: top;
 
-  @include md-layout-small {
-    top: 48px;
-  }
-
-  @include md-layout-xsmall {
+  @include md-layout(xsmall) {
     display: none;
   }
-}
 
-.nav-leave-active {
-  display: none;
-}
+  :global {
+    a.md-button {
+      display: block;
+      font-size: 14px;
+      font-weight: 400;
+      text-decoration: none;
+      color: var(--md-color-on-surface) !important;
+      padding: 0 20px;
+      line-height: 40px;
 
-.nav-enter-active {
-  opacity: 0;
-  transform: translate3d(-100%, 0, 0);
-  transition: 0.4s $md-transition-default-timing;
-  transition-property: opacity, transform;
-  will-change: opacity, transform;
-}
+      > .md-content-layer {
+        align-items: baseline;
+      }
 
-.nav-enter-to {
-  opacity: 1;
-  transform: translate3d(0, 0, 0);
-}
+      .tip {
+        margin-left: 4px;
+        font-size: 12px;
+        color: var(--md-color-on-surface-variant);
+      }
 
-.md-drawer {
-  display: none;
+      & + .md-button {
+        margin-left: 0;
+      }
 
-  @include md-layout-xsmall {
-    display: flex;
-    flex-direction: column;
+      &:hover {
+        text-decoration: none;
+      }
+
+      &.active,
+      &.active .tip {
+        color: var(--md-color-primary) !important;
+      }
+    }
   }
 }
 
-.main-nav-drawer-content {
-  padding: 16px;
-  flex: 1;
-  overflow: auto;
-  border-top: 1px solid rgb(0 0 0 / 12%);
-}
+// .md-drawer {
+//   display: none;
+
+//   @include md-layout(xsmall) {
+//     display: flex;
+//     flex-direction: column;
+//   }
+// }
+
+// .main-nav-drawer-content {
+//   padding: 16px;
+//   flex: 1;
+//   overflow: auto;
+//   border-top: 1px solid rgb(0 0 0 / 12%);
+// }

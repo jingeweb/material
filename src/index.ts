@@ -1,4 +1,4 @@
-// import app style
+import 'jinge-material/style/index.css';
 import './entry/style.scss';
 
 import { bootstrap } from 'jinge';

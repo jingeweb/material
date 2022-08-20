@@ -8,7 +8,15 @@
     </pre>
   </div>
 
-  <md-button class="md-raised md-accent md-dense" ref:copy>
+  <div :class="style.tip">
+    <span>${_lang}</span>
+    <md-tooltip title="复制代码">
+      <md-icon-button type="text" ref:copy>
+          <md-ic-content_copy />
+      </md-icon-button>
+    </md-tooltip>
+  </div>
+  <!-- <md-button type="filled-tonal" ref:copy>
   复制
-  </md-button>
+  </md-button> -->
 </div>

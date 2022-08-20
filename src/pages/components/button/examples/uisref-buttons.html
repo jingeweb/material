@@ -1,7 +1,8 @@
-<div>
+<!-- import style from './common-buttons.scss' -->
+<div :class="style.demo">
   <md-button to="components.button">Default</md-button>
-  <md-button to="components.button" class="md-primary">Primary</md-button>
-  <md-button to="components.icon" class="md-accent">Accent</md-button>
-  <md-button to="components.button" disabled>Disabled</md-button>
-  <md-button to="components.icon" target="_blank">Open in new tab</md-button>
+  <md-button to="components.button" type="filled">Filled</md-button>
+  <md-button to="components.icon" type="outlined">Outlined</md-button>
+  <md-button to="components.button" type="text" disabled>Disabled</md-button>
+  <md-button to="components.icon" type="text" target="_blank">Open in new tab</md-button>
 </div>

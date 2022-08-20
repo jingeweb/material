@@ -1,5 +1,3 @@
-@import '~jinge-material/style/palette.scss';
-
 .demo {
   :global {
     .md-layout-item {
@@ -15,7 +13,7 @@
       &.md-layout {
         &::after {
           transform: translateY(-100%);
-          background: md-get-palette-color(yellow, 200);
+          background-color: var(--md-color-primary-container);
         }
 
         .md-layout-item::after {
@@ -23,7 +21,7 @@
           margin-top: 16px;
           position: relative;
           z-index: 1;
-          background: md-get-palette-color(pink, 200);
+          background-color: var(--md-color-on-primary-container);
         }
       }
     }

@@ -10,16 +10,16 @@
 <PageContainer centered title="阴影">
   <div class="page-container-section">
     <p>
-      阴影（Elevation）用于指示元素距离表面（Surface）的距离。Material Design 设计规范中定义了 9 种程度的阴影深度，
-      依次是 1, 2, 3, 4, 6, 8, 12, 16, 24。Jinge Material 提供了对应的 9 种 class 可供使用：
+      阴影（Elevation）用于指示元素距离表面（Surface）的距离。Material Design 设计规范中定义了 5 种程度的阴影深度，Jinge Material 提供了对应的 class 可供使用。
     </p>
   </div>
 
   <div class="page-container-section">
     <CodeExample title="Elevation" e:example="_examples.basic" />
-    <ApiItem title="API - md-elevation">
-
-      <ApiTable e:headings="api.classes.headings" e:props="api.classes.props" slot-pass:classes />
-    </ApiItem>
+    <p>
+      可以搭配使用 .md-container，.md-surface 和 .md-elevation-[X] 这几个 classes，在容器上设置阴影深度。
+      <br/>
+      更简单的方式是直接使用<code>md-content</code>组件，详见该组件的 demo 和 api。
+    </p>
   </div>
 </PageContainer>

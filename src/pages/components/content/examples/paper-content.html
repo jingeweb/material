@@ -1,6 +1,8 @@
 <!-- import style from './paper-content.scss' -->
 <div :class="style.demo">
-  <md-content>Background</md-content>
-  <md-content class="md-primary">Primary</md-content>
-  <md-content class="md-accent">Accent</md-content>
+  <md-content type="surface">Surface</md-content>
+  <md-content type="surface" interactive>Surface With Interactive</md-content>
+  <md-content type="surface" interactive elevation="2">Surface With Elevation 2</md-content>
+  <md-content type="primary" elevation="2" interactive>Primary With Elevation 2</md-content>
+  <md-content type="surface" interactive elevation="2" noShadow>Surface noShadow Elevation</md-content>
 </div>

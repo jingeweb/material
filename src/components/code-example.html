@@ -2,34 +2,34 @@
   import style from './code-example.scss';
   import { CodeBlock } from './code-block';
 -->
-<div :class="style.codeExample">
-  <md-toolbar class="md-dense md-primary" elevation="0">
-    <span class="md-title">${_title}</span>
+<md-card type="outlined" :class="style.codeExample">
+  <md-topbar>
+    <span class="md-text">${_title}</span>
     <if e:expect="tab !== 'demo'">
       <md-tooltip title="显示示例">
-        <md-button on:click="tab = 'demo'" class="md-icon-button md-dense md-on-primary">
-          <md-icon-code/>
-        </md-button>
+        <md-icon-button on:click="tab = 'demo'" type="text">
+          <md-ic-code/>
+        </md-icon-button>
       </md-tooltip>
     </if>
     <md-tooltip title="显示 typescript 代码">
-      <md-button on:click="tab = 'ts'" class="md-icon-button md-dense md-on-primary">
+      <md-button on:click="tab = 'ts'" type="text">
         ts
       </md-button>
     </md-tooltip>
     <md-tooltip title="显示 html 代码">
-      <md-button on:click="tab = 'html'" class="md-icon-button md-dense md-on-primary">
+      <md-button on:click="tab = 'html'" type="text">
         html
       </md-button>
     </md-tooltip>
     <if e:expect="_example.source.sass">
     <md-tooltip title="显示 sass 代码">
-      <md-button on:click="tab = 'sass'" class="md-icon-button md-dense md-on-primary">
+      <md-button on:click="tab = 'sass'" type="text">
         sass
       </md-button>
     </md-tooltip>
     </if>
-  </md-toolbar>
+  </md-topbar>
   <switch e:test="tab">
     <md-content slot-pass:demo :class="style.demo">
       <div :class="style.demoContent">
@@ -41,4 +41,4 @@
     <CodeBlock slot-pass:ts lang="ts" e:code="_example.source.ts" />
     <CodeBlock slot-pass:sass lang="sass" e:code="_example.source.sass" />
   </switch>
-</div>
+</md-card>

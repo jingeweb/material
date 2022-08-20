@@ -10,7 +10,7 @@
 -->
 <PageContainer centered title="版式">
   <div class="page-container-section">
-    <h2>字体</h2>
+    <h2 class="md-headline-medium">字体</h2>
     <p>
       Material Design 设计规范里的英文字体为 Roboto，推荐使用 Google Fonts 来加载字体资源。
       你需要在 html 的头里，加入以下的代码：
@@ -36,18 +36,18 @@
   </div>
 
   <div class="page-container-section">
-    <h2>文字样式</h2>
+    <h2 class="md-headline-medium">文字样式</h2>
     <p>
       Material Desgin 设计规范约束了可以使用的文字样式（包括字号、粗细和行距）。
-      Jinge Material 提供了这几类样式的 class 可供使用：
     </p>
-  </div>
-
-  <div class="page-container-section">
     <CodeExample title="Typography" e:example="_examples.basic" />
 
-    <ApiItem title="API">
-      <ApiTable e:headings="api.classes.headings" e:props="api.classes.props" slot-pass:classes />
-    </ApiItem>
+    <h3 class="md-title-large">API - Classes</h3>
+    <p>
+      通过给元素添加<code>md-[type]-[size]</code>这个 class，可以指定元素的文字样式。<br/>
+      其中的 type 和 size 参数替换为实际的需求，例如<code>md-display-large</code>或<code>md-body-medium</code>。<br/>
+      所有可用样式参看 demo 里的源码，或查看 M3 官方规范。
+    </p>
+
   </div>
 </PageContainer>

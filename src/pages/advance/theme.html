@@ -7,17 +7,13 @@
 -->
 <PageContainer centered title="主题">
   <section class="page-container-section">
-    <h2 class="md-headline">主题</h2>
+    <h2 class="md-headline-medium">主题</h2>
     <p>
-      Jinge Material 组件库<router-link to="about">移植自 Vue Material</router-link>，但在多主题的支持上，进行了彻底地重构。主要包括两个方面：
+      Jinge Material 组件库依托 CSS 变量（css3 variable）来实现主题色板的切换。
     </p>
-    <ul>
-      <li>完全依赖 CSS 变量（css3 variable）来实现颜色的指定和色板的切换。</li>
-      <li>完全遵循 Material Design 最新的设计规范中关于色板的规定，包括暗色主题。</li>
-    </ul>
   </section>
   <section class="page-container-section">
-    <h2 class="md-title">预置主题</h2>
+    <h2 class="md-headline-small">预置主题</h2>
     <p>
       Jinge Material 提供了 4 个预先构建好的主题，包括蓝色（default）、紫色（purple）、暗色蓝（default-dark）和暗色紫（purple-dark）。
       构建好的主题文件位于 <code>themes</code> 目录下，使用时在 html 中或 js 中加载即可：
@@ -34,7 +30,7 @@
     </CodeBlock>
   </section>
   <section class="page-container-section">
-    <h2 class="md-title">切换主题</h2>
+    <h2 class="md-headline-small">切换主题</h2>
     <p>
       组件的颜色全部通过 CSS 变量引用色板中定义的颜色，因此切换主题只需要简单地替换色板文件即可。
       从技术角度讲，替换色板本质上是替换(覆盖) CSS 变量的值。 
@@ -49,7 +45,7 @@
     </p>
   </section>
   <section class="page-container-section">
-    <h2 class="md-title">自定义主题</h2>
+    <h2 class="md-headline-small">自定义主题</h2>
     <p>
       自定义主题可以通过加载自定义的主题文件（即色板文件）实现。色板里颜色的定义严格遵循 Material Design 的规范。
       可在参考 themes 目录下构建好的色板 css 文件创建自定义色板文件，也可以参考下面的 scss 源码创建并构建色板文件：

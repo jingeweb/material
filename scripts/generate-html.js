@@ -24,6 +24,13 @@ async function generateHtml(jsfile, cssfile) {
       minifyJS: true,
       minifyCSS: true,
     });
+  } else {
+    htmlCnt = htmlCnt.replace(
+      '</head>',
+      `<script src="/lib/jinge.js"></script>
+<script src="/lib/jinge-router.js"></script>
+</head>`,
+    );
   }
   return htmlCnt;
 }

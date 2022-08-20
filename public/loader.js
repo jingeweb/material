@@ -8,7 +8,7 @@
   const LOCALE_KEY_NAME = 'jinge-material-site.locale';
   const THEME_KEY_NAME = 'jinge-material-site.theme';
   const THEME_LINK_ID = 'jinge-material-site-theme-link';
-  const SUPPORT_THEMES = ['default', 'default-dark', 'purple', 'purple-dark'];
+  const SUPPORT_THEMES = ['blue', 'purple', 'green', 'red'];
   const BASE_HREF = '{BASE_HREF}'; // BASE_HEF 会被 ../scripts/html.js 替换
   /** loader utils **/
   function loadStyle(href, id) {
@@ -36,34 +36,26 @@
     });
   }
   function getLocale() {
-    const pn = location.pathname;
-    const pi = pn.indexOf('/', BASE_HREF.length);
-    let locale = pi > 0 ? pn.substring(BASE_HREF.length, pi) : null;
-    if (locale === 'zh_cn' || locale === 'en') {
-      localStorage.setItem(LOCALE_KEY_NAME, locale);
-      return locale;
-    }
     locale = localStorage.getItem(LOCALE_KEY_NAME) || navigator.language.toLowerCase().replace(/-/g, '_');
-    if (locale.startsWith('zh_')) {
-      locale = 'zh_cn';
+    if (locale === 'zh_cn') {
+      // do nothing
+    } else if (locale.startsWith('zh_')) {
+      locale = 'zh_tr';
     } else {
       locale = 'en';
     }
-    history.replaceState(null, null, `${BASE_HREF}${locale}/`);
     localStorage.setItem(LOCALE_KEY_NAME, locale);
     return locale;
   }
   function getTheme() {
-    let theme = localStorage.getItem(THEME_KEY_NAME);
+    let [theme, dark] = (localStorage.getItem(THEME_KEY_NAME) || '').split('.');
     if (!theme || SUPPORT_THEMES.indexOf(theme) < 0) {
-      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        theme = SUPPORT_THEMES[1];
-      } else {
-        theme = SUPPORT_THEMES[0];
-      }
+      theme = SUPPORT_THEMES[0];
     }
-    localStorage.setItem(THEME_KEY_NAME, theme);
-    return theme;
+    if (!dark || (dark !== 'light' && dark !== 'dark')) {
+      dark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+    return `${theme}.${dark}`;
   }
 
   const env = {

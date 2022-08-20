@@ -1,4 +1,6 @@
 <!-- import style from './home-icon.scss' -->
 <div :class="[style.homeIcon, class]">
-  <_slot />
+  <div :class="style.inner">
+    <_slot />
+  </div>
 </div>

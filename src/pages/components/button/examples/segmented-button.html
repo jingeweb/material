@@ -1,0 +1,29 @@
+<!-- import style from './common-buttons.scss' -->
+<div :class="style.demo">
+  <small>Single Select</small>
+  <md-segmented-button :value="v" on:change="onselect">
+    <md-segmented-button-item value="day">
+      <md-ic-check />
+      Day
+    </md-segmented-button-item>
+    <md-segmented-button-item value="month">
+      Month
+    </md-segmented-button-item>
+    <md-segmented-button-item value="year">
+      Year
+    </md-segmented-button-item>
+  </md-segmented-button>
+  <small>Multiple Select</small>
+  <md-segmented-button multiple :value="vs" on:change="onselect">
+    <md-segmented-button-item value="day">
+      <md-ic-check />
+      Day
+    </md-segmented-button-item>
+    <md-segmented-button-item value="month">
+      Month
+    </md-segmented-button-item>
+    <md-segmented-button-item value="year">
+      Year
+    </md-segmented-button-item>
+  </md-segmented-button>
+</div>

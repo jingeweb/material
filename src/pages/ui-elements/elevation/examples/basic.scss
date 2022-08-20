@@ -4,9 +4,10 @@
   flex-wrap: wrap;
 
   :global {
-    .md-content {
-      width: 100px;
-      height: 100px;
+    .md-surface {
+      width: 108px;
+      height: 108px;
+      border-radius: 8px;
       margin: 24px;
       display: flex;
       align-items: center;

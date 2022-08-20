@@ -1,0 +1,223 @@
+/*!******************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/.pnpm/css-loader@6.7.2_webpack@5.75.0/node_modules/css-loader/dist/cjs.js!./node_modules/.pnpm/prismjs@1.29.0/node_modules/prismjs/themes/prism.css ***!
+  \******************************************************************************************************************************************************************************/
+/**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: black;
+	background: none;
+	text-shadow: 0 1px white;
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+	text-shadow: none;
+	background: #b3d4fc;
+}
+
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+code[class*="language-"]::selection, code[class*="language-"] ::selection {
+	text-shadow: none;
+	background: #b3d4fc;
+}
+
+@media print {
+	code[class*="language-"],
+	pre[class*="language-"] {
+		text-shadow: none;
+	}
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #f5f2f0;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: slategray;
+}
+
+.token.punctuation {
+	color: #999;
+}
+
+.token.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #905;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #690;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+	color: #9a6e3a;
+	/* This background color was intended by the author of this theme. */
+	background: hsla(0, 0%, 100%, .5);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+	color: #07a;
+}
+
+.token.function,
+.token.class-name {
+	color: #DD4A68;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+	color: #e90;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+
+/*!***********************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/.pnpm/css-loader@6.7.2_webpack@5.75.0/node_modules/css-loader/dist/cjs.js!./node_modules/.pnpm/sass-loader@13.2.0_sass@1.56.1+webpack@5.75.0/node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[0].use[2]!./src/themes/purple.light.scss ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************/
+:root {
+  --md-color-primary: #6750a4;
+  --md-color-primary-rgb: 103 80 164;
+  --md-color-on-primary: #fff;
+  --md-color-on-primary-rgb: 255 255 255;
+  --md-color-primary-container: #eaddff;
+  --md-color-primary-container-rgb: 234 221 255;
+  --md-color-on-primary-container: #21005d;
+  --md-color-on-primary-container-rgb: 33 0 93;
+  --md-color-secondary: #625b71;
+  --md-color-secondary-rgb: 98 91 113;
+  --md-color-on-secondary: #fff;
+  --md-color-on-secondary-rgb: 255 255 255;
+  --md-color-secondary-container: #e8def8;
+  --md-color-secondary-container-rgb: 232 222 248;
+  --md-color-on-secondary-container: #1d192b;
+  --md-color-on-secondary-container-rgb: 29 25 43;
+  --md-color-tertiary: #7d5260;
+  --md-color-tertiary-rgb: 125 82 96;
+  --md-color-on-tertiary: #fff;
+  --md-color-on-tertiary-rgb: 255 255 255;
+  --md-color-tertiary-container: #ffd8e4;
+  --md-color-tertiary-container-rgb: 255 216 228;
+  --md-color-on-tertiary-container: #31111d;
+  --md-color-on-tertiary-container-rgb: 49 17 29;
+  --md-color-error: #b3261e;
+  --md-color-error-rgb: 179 38 30;
+  --md-color-on-error: #fff;
+  --md-color-on-error-rgb: 255 255 255;
+  --md-color-error-container: #f9dedc;
+  --md-color-error-container-rgb: 249 222 220;
+  --md-color-on-error-container: #410e0b;
+  --md-color-on-error-container-rgb: 65 14 11;
+  --md-color-outline: #79747e;
+  --md-color-outline-rgb: 121 116 126;
+  --md-color-background: #fffbfe;
+  --md-color-background-rgb: 255 251 254;
+  --md-color-on-background: #1c1b1f;
+  --md-color-on-background-rgb: 28 27 31;
+  --md-color-surface: #fffbfe;
+  --md-color-surface-rgb: 255 251 254;
+  --md-color-on-surface: #1c1b1f;
+  --md-color-on-surface-rgb: 28 27 31;
+  --md-color-surface-variant: #e7e0ec;
+  --md-color-surface-variant-rgb: 231 224 236;
+  --md-color-on-surface-variant: #49454f;
+  --md-color-on-surface-variant-rgb: 73 69 79;
+  --md-color-inverse-surface: #313033;
+  --md-color-inverse-surface-rgb: 49 48 51;
+  --md-color-inverse-on-surface: #f4eff4;
+  --md-color-inverse-on-surface-rgb: 244 239 244;
+  --md-color-inverse-primary: #d0bcff;
+  --md-color-inverse-primary-rgb: 208 188 255;
+  --md-color-shadow: #000;
+  --md-color-shadow-rgb: 0 0 0;
+  --md-color-surface-tint: #6750a4;
+  --md-color-surface-tint-rgb: 103 80 164;
+  --md-color-outline-variant: #cac4d0;
+  --md-color-outline-variant-rgb: 202 196 208;
+  --md-color-scrim: #000;
+  --md-color-scrim-rgb: 0 0 0;
+  --md-color-surface-1: #f7f2fa;
+  --md-shadow-elevation-1: 0 1px 2px 0 rgb(0 0 0/30%), 0 1px 3px 1px rgb(0 0 0/15%);
+  --md-color-surface-2: #f3edf7;
+  --md-shadow-elevation-2: 0 1px 2px 0 rgb(0 0 0/30%), 0 2px 6px 2px rgb(0 0 0/15%);
+  --md-color-surface-3: #eee8f4;
+  --md-shadow-elevation-3: 0 1px 3px 0 rgb(0 0 0/30%), 0 4px 8px 3px rgb(0 0 0/15%);
+  --md-color-surface-4: #ede6f3;
+  --md-shadow-elevation-4: 0 2px 3px 0 rgb(0 0 0/30%), 0 6px 10px 4px rgb(0 0 0/15%);
+  --md-color-surface-5: #eae3f1;
+  --md-shadow-elevation-5: 0 4px 4px 0 rgb(0 0 0/30%), 0 8px 12px 6px rgb(0 0 0/15%);
+}
+
+:root {
+  --color-theme-selector-border: rgb(var(--md-color-on-surface-rgb) / 4%);
+}

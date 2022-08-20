@@ -7,7 +7,7 @@
 -->
 <PageContainer centered title="国际化">
   <section class="page-container-section">
-    <h2 class="md-headline">国际化</h2>
+    <h2 class="md-headline-medium">国际化</h2>
     <p>
       Jinge Material 组件库没有直接依赖 jinge 框架内置的国际化方案，而是自己实现了一套国际化方案。
       因为使用 Jinge Material 组件的项目不一定需要支持多语言。
@@ -15,8 +15,8 @@
     </p>
   </section>
   <section class="page-container-section">
-    <h2 class="md-title">使用 npm 或 yarn 包</h2>
-    <h3>项目只使用一种语言</h3>
+    <h2 class="md-headline-small">使用 npm 或 yarn 包</h2>
+    <h3 class="md-title-large">项目只使用一种语言</h3>
     <p>如果只需要支持一种语言，只需要在项目的入口文件里，加入以下的代码：</p>
     <CodeBlock lang="ts">
       <code>
@@ -26,7 +26,7 @@
       </code>
     </CodeBlock>
     <p>Jinge Material 组件库没有默认的语言，因此必须指定语言并引入语言资源。</p>
-    <h3>项目使用多种语言</h3>
+    <h3 class="md-title-large">项目使用多种语言</h3>
     <p>如果需要支持多种语言，推荐一次性将项目需要支持的语言资源全部引入。这样做的好处是切换语言时不再需要额外的通过 ajax 加载资源的逻辑，并且 Jinge Material 的语言资源也很小，不会引入带宽负担。加载的资源可以存放在某个 service 中，比如：</p>
     <CodeBlock lang="ts">
       <code>

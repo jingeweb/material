@@ -1,4 +1,4 @@
-import { Attributes, Component } from 'jinge';
+import { Attributes, Component, vm } from 'jinge';
 
 import { watchForComponent } from 'jinge-i18n';
 import _tpl from './index.html';
@@ -10,8 +10,6 @@ import Gutter from './examples/gutter';
 import sourceGutter from './examples/gutter?example';
 import Nested from './examples/nested';
 import sourceNested from './examples/nested?example';
-import Alignment from './examples/alignment';
-import sourceAlignment from './examples/alignment?example';
 import Hide from './examples/hide';
 import sourceHide from './examples/hide?example';
 import Sizes from './examples/sizes';
@@ -29,13 +27,7 @@ export class PageLayout extends Component {
   constructor(attrs: Attributes) {
     super(attrs);
 
-    watchForComponent(
-      this,
-      () => {
-        this.api = apis();
-      },
-      true,
-    );
+    watchForComponent(this, () => (this.api = vm(apis())), true);
     this._examples = {
       columns: {
         component: Columns,
@@ -49,10 +41,10 @@ export class PageLayout extends Component {
         component: Nested,
         source: sourceNested,
       },
-      alignment: {
-        component: Alignment,
-        source: sourceAlignment,
-      },
+      // alignment: {
+      //   component: Alignment,
+      //   source: sourceAlignment,
+      // },
       hide: {
         component: Hide,
         source: sourceHide,

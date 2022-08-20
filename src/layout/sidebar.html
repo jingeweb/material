@@ -1,0 +1,54 @@
+<!-- import sty from './sidebar.scss' -->
+<!-- import { Ics_home } from 'jinge-symbols/home'-->
+<div
+  :class="[sty.sidebar, activeRailItem.children.length && sty.withDrawer, withShadow && sty.withShadow, class]"
+  :style="style"
+  on:mouseleave="_onMouseOut"
+>
+  <md-navigation-rail>
+    <!-- <md-navigation-rail-item type="menu" vm:state>
+      <md-ics-menu :state="state" />
+    </md-navigation-rail-item> -->
+    <!-- <md-navigation-rail-item type="fab" vm:state>
+      <md-fab type="secondary">
+        <md-ics-menu :state="state" />
+      </md-fab>
+    </md-navigation-rail-item> -->
+    <for :loop="menus" vm:each="menu">
+    <md-navigation-rail-item
+      :to="menu.to"
+      :icon="menu.icon"
+      :label="menu.name"
+      :hover="hoverRailItem === menu"
+      on:active="_onActive($args[0], menu)"
+      on:hover="_onHover($args[0], menu)"
+    />
+    </for>
+    <!-- <md-navigation-rail-head-item>
+      <md-icon-menu />
+    </md-navigation-rail-head-item>
+    <md-navigation-rail-foot-item>
+      <md-icon-settings />
+    </md-navigation-rail-foot-item> -->
+  </md-navigation-rail>
+  <if :expect="slideDrawer" transition="slide" on:transition="_onSlideTs">
+    <div :class="sty.drawer" on:mouseenter="withShadow = true">
+      <hide :test="!fadeDrawer" transition on:transition="_onHideTs">
+        <md-navigation-drawer>
+          <for :loop="drawerMenus" vm:each="menu">
+          <md-navigation-drawer-item
+            :to="menu.to"
+            :label="menu.name"
+          />
+          </for>
+        </md-navigation-drawer>
+      </hide>
+    </div>
+  </if>
+  <!-- <if :expect="activeMenu.children.length">
+  <md-content class="md-sidebar-drawer">
+    <div class="md-drawer-headline">Mail</div>
+    
+  </md-content>
+  </if> -->
+</div>

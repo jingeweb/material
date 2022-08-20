@@ -25,6 +25,12 @@ module.exports = {
     publicPath: envs.baseHref,
   },
   devtool: envs.isProd ? false : 'source-map',
+  externals: envs.isProd
+    ? {}
+    : {
+        jinge: 'jinge',
+        'jinge-router': "window['jinge-router']",
+      },
   resolve: {
     extensions: ['.ts', '.js'],
     alias: getTsConfigPathsAlias(),
@@ -37,13 +43,23 @@ module.exports = {
     loggingDebug: ['sass-loader'],
   },
   devServer: {
-    static: path.resolve(__dirname, '../public'),
-    port: 9090,
+    static: [
+      {
+        directory: path.resolve(__dirname, '../public'),
+      },
+      {
+        directory: path.resolve(__dirname, '../node_modules'),
+      },
+    ],
+    port: 8080,
     open: true,
+    host: process.env.HOST || 'localhost',
     historyApiFallback: true,
     // hot: false,
-    devMiddleware: {
-      writeToDisk: 'WRITE_TO_DISK' in process.env,
-    },
+    devMiddleware: process.env.WRITE_TO_DISK
+      ? {
+          writeToDisk: true,
+        }
+      : undefined,
   },
 };

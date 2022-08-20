@@ -1,7 +1,12 @@
 .home-icon {
   margin-bottom: 32px;
-  display: block;
+  display: flex;
+  width: 100%;
+  align-items: center;
   position: relative;
-  left: 50%;
-  transform: translateX(-50%);
+  justify-content: center;
+
+  > .inner {
+    position: relative;
+  }
 }

@@ -1,5 +1,4 @@
-@import '~jinge-material/style/palette.scss';
-@import '~jinge-material/style/animation/variables.scss';
+@import '~jinge-material/style/animation.scss';
 
 .demo {
   :global {
@@ -16,7 +15,8 @@
         height: 100%;
         padding: 8px;
         display: block;
-        background: md-get-palette-color(blue, 200);
+
+        // background: md-get-palette-color(blue, 200);
       }
     }
   }

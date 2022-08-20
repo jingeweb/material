@@ -1,0 +1,206 @@
+/*!**************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/.pnpm/css-loader@6.7.2_webpack@5.75.0/node_modules/css-loader/dist/cjs.js!./node_modules/.pnpm/prismjs@1.29.0/node_modules/prismjs/themes/prism-okaidia.css ***!
+  \**************************************************************************************************************************************************************************************/
+/**
+ * okaidia theme for JavaScript, CSS and HTML
+ * Loosely based on Monokai textmate theme by http://www.monokai.nl/
+ * @author ocodia
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #f8f8f2;
+	background: none;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+	border-radius: 0.3em;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #272822;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #8292a2;
+}
+
+.token.punctuation {
+	color: #f8f8f2;
+}
+
+.token.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #f92672;
+}
+
+.token.boolean,
+.token.number {
+	color: #ae81ff;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #a6e22e;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+	color: #f8f8f2;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+	color: #e6db74;
+}
+
+.token.keyword {
+	color: #66d9ef;
+}
+
+.token.regex,
+.token.important {
+	color: #fd971f;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+
+/*!********************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/.pnpm/css-loader@6.7.2_webpack@5.75.0/node_modules/css-loader/dist/cjs.js!./node_modules/.pnpm/sass-loader@13.2.0_sass@1.56.1+webpack@5.75.0/node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[0].use[2]!./src/themes/blue.dark.scss ***!
+  \********************************************************************************************************************************************************************************************************************************************************************/
+:root {
+  --md-color-primary: #a7c8ff;
+  --md-color-primary-rgb: 167 200 255;
+  --md-color-on-primary: #003061;
+  --md-color-on-primary-rgb: 0 48 97;
+  --md-color-primary-container: #004689;
+  --md-color-primary-container-rgb: 0 70 137;
+  --md-color-on-primary-container: #d5e3ff;
+  --md-color-on-primary-container-rgb: 213 227 255;
+  --md-color-secondary: #bdc7dc;
+  --md-color-secondary-rgb: 189 199 220;
+  --md-color-on-secondary: #273141;
+  --md-color-on-secondary-rgb: 39 49 65;
+  --md-color-secondary-container: #3d4758;
+  --md-color-secondary-container-rgb: 61 71 88;
+  --md-color-on-secondary-container: #d9e3f8;
+  --md-color-on-secondary-container-rgb: 217 227 248;
+  --md-color-tertiary: #dbbce1;
+  --md-color-tertiary-rgb: 219 188 225;
+  --md-color-on-tertiary: #3e2845;
+  --md-color-on-tertiary-rgb: 62 40 69;
+  --md-color-tertiary-container: #563e5d;
+  --md-color-tertiary-container-rgb: 86 62 93;
+  --md-color-on-tertiary-container: #f8d8fe;
+  --md-color-on-tertiary-container-rgb: 248 216 254;
+  --md-color-error: #ffb4ab;
+  --md-color-error-rgb: 255 180 171;
+  --md-color-error-container: #93000a;
+  --md-color-error-container-rgb: 147 0 10;
+  --md-color-on-error: #690005;
+  --md-color-on-error-rgb: 105 0 5;
+  --md-color-on-error-container: #ffdad6;
+  --md-color-on-error-container-rgb: 255 218 214;
+  --md-color-background: #1a1c1e;
+  --md-color-background-rgb: 26 28 30;
+  --md-color-on-background: #e3e2e6;
+  --md-color-on-background-rgb: 227 226 230;
+  --md-color-surface: #1a1c1e;
+  --md-color-surface-rgb: 26 28 30;
+  --md-color-on-surface: #e3e2e6;
+  --md-color-on-surface-rgb: 227 226 230;
+  --md-color-surface-variant: #43474e;
+  --md-color-surface-variant-rgb: 67 71 78;
+  --md-color-on-surface-variant: #c4c6cf;
+  --md-color-on-surface-variant-rgb: 196 198 207;
+  --md-color-outline: #8e9199;
+  --md-color-outline-rgb: 142 145 153;
+  --md-color-inverse-on-surface: #1a1c1e;
+  --md-color-inverse-on-surface-rgb: 26 28 30;
+  --md-color-inverse-surface: #e3e2e6;
+  --md-color-inverse-surface-rgb: 227 226 230;
+  --md-color-inverse-primary: #245fa6;
+  --md-color-inverse-primary-rgb: 36 95 166;
+  --md-color-shadow: #000;
+  --md-color-shadow-rgb: 0 0 0;
+  --md-color-surface-tint: #a7c8ff;
+  --md-color-surface-tint-rgb: 167 200 255;
+  --md-color-outline-variant: #43474e;
+  --md-color-outline-variant-rgb: 67 71 78;
+  --md-color-scrim: #000;
+  --md-color-scrim-rgb: 0 0 0;
+  --md-color-surface-1: #212529;
+  --md-shadow-elevation-1: 0 1px 2px 0 rgb(0 0 0/30%), 0 1px 3px 1px rgb(0 0 0/15%);
+  --md-color-surface-2: #252a30;
+  --md-shadow-elevation-2: 0 1px 2px 0 rgb(0 0 0/30%), 0 2px 6px 2px rgb(0 0 0/15%);
+  --md-color-surface-3: #2a2f37;
+  --md-shadow-elevation-3: 0 1px 3px 0 rgb(0 0 0/30%), 0 4px 8px 3px rgb(0 0 0/15%);
+  --md-color-surface-4: #2b3139;
+  --md-shadow-elevation-4: 0 2px 3px 0 rgb(0 0 0/30%), 0 6px 10px 4px rgb(0 0 0/15%);
+  --md-color-surface-5: #2e343e;
+  --md-shadow-elevation-5: 0 4px 4px 0 rgb(0 0 0/30%), 0 8px 12px 6px rgb(0 0 0/15%);
+}
+
+:root {
+  --color-theme-selector-border: rgb(var(--md-color-on-surface-rgb) / 70%);
+}

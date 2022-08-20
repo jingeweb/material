@@ -1,19 +1,8 @@
-<!-- import style from './style.scss' -->
+<!-- import style from './common-buttons.scss' -->
 <div :class="style.demo">
-  <div>
-    <small>Buttons</small>
-    <md-button>Default</md-button>
-    <md-button class="md-primary">Primary</md-button>
-    <md-button class="md-accent">Accent</md-button>
-    <md-button disabled>Disabled</md-button>
-  </div>
-
-  <div>
-    <small>Links</small>
-    <md-button e:href="pageUrl">Default</md-button>
-    <md-button e:href="pageUrl" class="md-primary">Primary</md-button>
-    <md-button e:href="pageUrl" class="md-accent">Accent</md-button>
-    <md-button e:href="pageUrl" disabled>Disabled</md-button>
-    <md-button href="https://www.google.com" target="_blank">Open in new tab</md-button>
-  </div>
+  <md-button e:href="pageUrl">Default</md-button>
+  <md-button type="filled" e:href="pageUrl">Filled</md-button>
+  <md-button type="outlined" e:href="pageUrl">Outlined</md-button>
+  <md-button e:href="pageUrl" type="text" disabled>Disabled</md-button>
+  <md-button type="text" href="https://www.google.com" target="_blank">Open in new tab</md-button>
 </div>

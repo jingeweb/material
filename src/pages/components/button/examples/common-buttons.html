@@ -1,0 +1,19 @@
+<!-- import style from './common-buttons.scss' -->
+<div :class="style.demo">
+  <md-button on:click="onClick">
+    <md-ic-home/>
+    <span>Default</span>
+  </md-button>
+  <md-button on:click="onClick" type="filled">Filled</md-button>
+  <md-button type="filled-tonal">Filled Tonal</md-button>
+  <md-button type="outlined">Outlined</md-button>
+  <md-button type="text">Text</md-button>
+  <md-button disabled>Disabled</md-button>
+  <md-button disabled type="outlined">Outlined Disabled</md-button>
+  <md-button disabled type="text">Text Disabled</md-button>
+  <small>Loading</small>
+  <md-button type="filled" :loading="loading" on:click="search">
+    <md-ic-search />
+    Search
+  </md-button>
+</div>

@@ -1,0 +1,19 @@
+@mixin jinge-logo {
+  :global {
+    polygon {
+      transition: fill ease 0.3s;
+
+      &.primary {
+        fill: var(--md-color-primary);
+      }
+
+      &.accent {
+        fill: var(--md-color-secondary);
+      }
+
+      &.background {
+        fill: var(--md-color-tertiary);
+      }
+    }
+  }
+}

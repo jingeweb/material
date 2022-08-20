@@ -1,5 +1,4 @@
-@import '~jinge-material/style/palette.scss';
-@import '~jinge-material/style/animation/variables.scss';
+@import '~jinge-material/style/animation.scss';
 
 .page-container {
   &.centered {
@@ -9,39 +8,46 @@
     transition: 0.4s $md-transition-default-timing;
   }
 
-  // &-leave-active {
-  //   display: none;
-  // }
+  h1,
+  h2,
+  h3,
+  h4,
+  p {
+    -webkit-margin-before: 1em;
+    margin-block-start: 1em;
+    -webkit-margin-after: 1em;
+    margin-block-end: 1em;
+  }
 
-  // &-enter-active {
-  //   opacity: 0;
-  //   transform: translate3d(0, 150px, 0);
-  //   transition-property: opacity, transform;
-  //   will-change: opacity, transform;
-  // }
+  h1,
+  h2,
+  h3,
+  h4,
+  p:first-child {
+    margin-top: 0;
+  }
 
-  // &-enter-to {
-  //   opacity: 1;
-  //   transform: translate3d(0, 0, 0);
-  // }
+  p a,
+  p strong {
+    margin: 0 4px;
+  }
 
   :global {
     .page-container-section {
-      letter-spacing: 0.01em;
-      line-height: 1.6em;
-
       + .page-container-section {
         margin-top: 32px;
       }
 
-      p > code,
-      li > code {
-        padding: 0 4px;
+      .md-title-large {
+        margin-bottom: 1em;
+      }
+
+      code:not(pre *) {
+        padding: 0 8px;
         display: inline-block;
-        color: #{md-get-palette-color(red, A200)};
-        background: var(--md-outline);
-        border-radius: 2px;
-        line-height: 1.45em;
+        background-color: rgb(var(--md-color-primary-rgb) / 12%);
+        border-radius: 3px;
+        margin: 0 2px;
       }
 
       p,

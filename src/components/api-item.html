@@ -1,17 +1,16 @@
-<!-- import style from './api-item.scss'; -->
 <div class="api-item">
   <h3>${_title}</h3>
 
   <_slot />
 
   <div :class="style.apiItemNavigation">
-    <for e:loop="_slots" vm:each="_slot" >
-    <md-button
-      class="${ currentSlot === _slot.name ? 'md-primary': '' }"
-      on:click="currentSlot = _slot.name">
-      ${ _slot.title }
-    </md-button>
-    </for>
+    <md-segmented-button :value="_slots[0].name" on:change="currentSlot = $args[0]">
+      <for e:loop="_slots" vm:each="_slot" >
+        <md-segmented-button-item :value="_slot.name">
+          ${ _slot.title }
+        </md-segmented-button-item>
+      </for>
+    </md-segmented-button>
   </div>
   <for e:loop="_slots" vm:each="_slot">
   <if e:expect="currentSlot === _slot.name">

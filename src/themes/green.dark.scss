@@ -1,0 +1,6 @@
+@import '~jinge-material/style/theme/green-dark/index.scss';
+@import '~prismjs/themes/prism-okaidia.css';
+
+:root {
+  --color-theme-selector-border: rgb(var(--md-color-on-surface-rgb) / 70%);
+}

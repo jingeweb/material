@@ -1,17 +1,18 @@
-@import '~jinge-material/style/animation/variables.scss';
+@import '~jinge-material/style/animation.scss';
 @import '~jinge-material/style/layout/mixins.scss';
-@import '~jinge-material/style/palette.scss';
 
 .home-icon-square {
-  width: 96px;
-  height: 100px;
-
   > div {
+    width: 96px;
+    height: 100px;
+  }
+
+  .square {
     width: 80px;
     height: 80px;
   }
 
-  &:hover {
+  > div:hover {
     .square {
       opacity: 0.87;
 
@@ -34,16 +35,16 @@
   will-change: transform, opacity;
 
   &:nth-child(1) {
-    background: md-get-palette-color(blue, a200);
+    background-color: #448aff;
   }
 
   &:nth-child(2) {
-    background: md-get-palette-color(lightgreen, a200);
+    background-color: #b2ff59;
     transform: translate3d(8px, 8px, 0);
   }
 
   &:nth-child(3) {
-    background: md-get-palette-color(grey, 50);
+    background-color: #fafafa;
     transform: translate3d(16px, 16px, 0);
   }
 }

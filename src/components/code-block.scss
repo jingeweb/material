@@ -1,5 +1,4 @@
-@import '~jinge-material/style/animation/variables.scss';
-@import '~jinge-material/style/palette.scss';
+@import '~jinge-material/style/animation.scss';
 
 .code-block {
   max-width: 100%;
@@ -18,28 +17,27 @@
     }
   }
 
-  &::after {
+  .tip {
     position: absolute;
-    top: 16px;
-    right: 16px;
-    transition: $md-transition-stand;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
     color: var(--md-on-surface-disabled);
-    content: attr(data-lang);
-    font-size: 11px;
-    line-height: 1em;
-    text-transform: uppercase;
-  }
 
-  :global {
-    .md-button {
-      min-width: 56px;
-      margin: 8px;
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      opacity: 0;
-      z-index: 999;
-      color: #fff;
+    > span {
+      font-size: 10px;
+      line-height: 1em;
+      text-transform: uppercase;
+      margin-right: 8px;
+    }
+
+    :global {
+      .md-button.md-icon-button {
+        .md-icon {
+          font-size: 16px;
+        }
+      }
     }
   }
 }

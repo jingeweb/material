@@ -1,73 +1,44 @@
-@import '~jinge-material/style/animation/variables.scss';
+@import '~jinge-material/style/animation.scss';
 @import '~jinge-material/style/layout/mixins.scss';
-@import '~jinge-material/style/palette.scss';
 
 .home-icon-circle {
-  width: 80px;
-  height: 100px;
-
   > div {
     width: 80px;
-    height: 80px;
+    height: 100px;
   }
 
-  &:hover .circle {
+  > div:hover .circle {
     &:nth-child(2) {
-      transform: scale(0.66) translate3d(0, -75%, 0);
-
-      @include md-layout-xsmall {
-        transform: scale(0.66) translate3d(-75%, -75%, 0);
-      }
+      transform: scale(1);
     }
 
     &:nth-child(3) {
-      transform: scale(0.33) translate3d(0, -150%, 0);
-
-      @include md-layout-xsmall {
-        transform: scale(0.33) translate3d(-150%, -150%, 0);
-      }
+      transform: scale(1);
     }
   }
 }
 
 .circle {
   position: absolute;
-  top: calc(50% + 10px);
+  width: 80px;
+  height: 80px;
   left: 0;
+  top: 10px;
   border-radius: 100%;
-  transform: translate3d(0, -50%, 0);
   transition: $md-transition-stand;
   will-change: transform;
 
-  @include md-layout-xsmall {
-    left: 50%;
-    transform: translate3d(-50%, -50%, 0);
-  }
-
   &:nth-child(1) {
-    background: md-get-palette-color(cyan, 300);
-    transform: scale(0.98) translate3d(0, -50%, 0);
-
-    @include md-layout-xsmall {
-      transform: scale(0.98) translate3d(-50%, -50%, 0);
-    }
+    background-color: #4dd0e1;
   }
 
   &:nth-child(2) {
-    background: md-get-palette-color(red, 400);
-    transform: scale(0.98) translate3d(0, -50%, 0);
-
-    @include md-layout-xsmall {
-      transform: scale(0.98) translate3d(-50%, -50%, 0);
-    }
+    background-color: #ef5350;
+    transform: scale(0.66);
   }
 
   &:nth-child(3) {
-    color: md-get-palette-color(yellow, 900);
-    background: md-get-palette-color(yellow, 500);
-  }
-
-  .md-ripple {
-    border-radius: 50%;
+    background-color: #ffeb3b;
+    transform: scale(0.33);
   }
 }

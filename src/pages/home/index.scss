@@ -1,4 +1,5 @@
 @import '~jinge-material/style/layout/mixins.scss';
+@import '../../layout/logo.scss';
 
 .home-splash {
   max-width: 1312px;
@@ -9,7 +10,11 @@
   margin: auto;
 
   section {
-    padding: 32px 0 48px;
+    padding: 16px;
+
+    @include md-layout(xsmall) {
+      padding: 12px;
+    }
   }
 }
 
@@ -17,7 +22,7 @@
   text-align: center;
   margin-top: 120px;
   opacity: 0.6;
-  padding: 0 12px;
+  padding: 0 16px;
 
   a {
     color: white;
@@ -35,6 +40,7 @@
 
 .home-logo {
   font-size: 248px;
+  @include jinge-logo;
 }
 
 .home-call {
@@ -42,16 +48,16 @@
   flex: 0 0 50%;
   font-size: 18px;
   line-height: 1.6em;
-  padding: 0 12px;
+  padding: 0 16px;
 }
 
 .home-name {
-  margin: 0;
+  margin: 0 0 0.2em;
   font-size: 50px;
   font-weight: 500;
   line-height: 1em;
 
-  @include md-layout-xsmall {
+  @include md-layout(xsmall) {
     font-size: 36px;
   }
 }
@@ -68,27 +74,36 @@
 
 .home-features {
   padding-bottom: 60px;
-  flex: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: stretch;
 
-  @media (min-width: 1690px) {
-    margin-top: 120px;
-  }
-
-  @include md-layout-xsmall {
+  @include md-layout(small) {
     margin-top: 60px;
+    flex-direction: column;
   }
 }
 
 .home-feature {
-  margin-bottom: 16px;
   text-align: center;
+  flex: 1;
+  padding: 36px 8px 16px 24px;
 
-  @include md-layout-xsmall {
-    text-align: center;
+  &:first-child {
+    margin-right: 16px;
+  }
+
+  &:last-child {
+    margin-left: 16px;
   }
 
   h2 {
     font-size: 22px;
     font-weight: 500;
+    margin-bottom: 8px;
+  }
+
+  @include md-layout(small) {
+    margin: 0 0 32px !important;
   }
 }

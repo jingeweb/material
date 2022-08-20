@@ -1,91 +1,71 @@
-@import '~jinge-material/style/animation/variables.scss';
+@import '~jinge-material/style/animation.scss';
 @import '~jinge-material/style/layout/mixins.scss';
+@import './logo.scss';
 
 .main-header {
   margin: auto;
-  max-width: 100%;
   position: fixed;
   top: 0;
   right: 0;
   left: 0;
   z-index: 100;
-  transition: 0.3s $md-transition-default-timing, box-shadow 0.4s 0.1s $md-transition-stand-timing;
-  will-change: box-shadow, max-width, background-color;
+  width: 100%;
 
   :global {
-    .md-toolbar-row {
+    .md-topbar {
+      background-color: transparent !important;
       max-width: 100%;
       transition: max-width 0.3s $md-transition-default-timing;
       will-change: max-width;
-      display: flex;
     }
 
-    .md-title {
-      flex: 1;
+    .app-title {
+      display: none;
 
-      .app-title {
-        display: none;
-
-        @include md-layout-xsmall {
-          display: inline;
-        }
+      @include md-layout(xsmall) {
+        display: inline;
       }
-    }
-
-    .md-icon {
-      font-size: 28px;
-      color: var(--md-on-surface);
     }
 
     .logo {
-      @include md-layout-xsmall {
-        display: none;
-      }
+      font-size: 30px;
+      margin-right: 16px;
+      @include jinge-logo;
 
-      .md-ripple {
-        padding: 0;
-        overflow: visible;
+      @include md-layout(xsmall) {
+        display: none;
       }
     }
 
     .menu {
       display: none;
 
-      @include md-layout-xsmall {
-        display: inline-block;
-      }
-    }
-  }
-
-  :global(.md-button.locale) {
-    @include md-layout-xsmall {
-      width: 40px;
-      min-width: 40px;
-
-      span {
-        display: none;
+      @include md-layout(xsmall) {
+        display: inline-flex;
       }
     }
   }
 
   &.splash {
-    background-color: #303030;
+    :global {
+      .md-topbar {
+        max-width: 1312px;
+        margin: 0 auto;
+      }
 
-    :global(.md-toolbar-row) {
-      max-width: 1312px;
-      margin: 0 auto;
+      .app-title {
+        display: none;
+      }
     }
+  }
+}
 
-    :global(.md-button) {
-      color: #fff;
-    }
-
-    :global(.md-title) {
-      color: #fff;
-    }
-
-    :global(.md-icon) {
-      color: #fff;
-    }
+.theme-menu {
+  i.theme-preview {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border: 2px solid var(--color-theme-selector-border);
+    border-radius: 50%;
   }
 }

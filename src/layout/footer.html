@@ -1,13 +1,11 @@
 <!-- import style from './footer.scss' -->
 <footer :class="[style.mainFooter, isSplash && style.splash, hide && 'jg-hide']">
-  <div :class="style.mainFooterContainer">
-    <div :class="style.mainFooterSection">
+  <div :class="style.inner">
+    <span>
       <router-link to="about" text="关于"/>
       <router-link to="license" text="许可证"/>
-    </div>
-
-    <div :class="style.mainFooterSection">
-      <a href="https://github.com/YuhangGe" target="_blank">Made with <span :class="style.red">❤</span> by Yuhang Ge</a>
-    </div>
+    </span>
+    <i/>
+    <a href="https://github.com/YuhangGe" target="_blank">Made with <span :class="style.red">❤</span> by Yuhang Ge</a>
   </div>
 </footer>

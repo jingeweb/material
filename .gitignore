@@ -6,3 +6,5 @@ node_modules
 /lib
 /dist
 /public/themes
+/public/jinge.*
+/public/lib

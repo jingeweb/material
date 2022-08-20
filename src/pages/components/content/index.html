@@ -10,17 +10,18 @@
 <PageContainer centered title="内容框">
   <div class="page-container-section">
     <p>
-      包含任意信息的内容容器在 Material Design 规范中称为材料或材料片。
+      Material Design 3 规范，把承载内容的容器统一划分为 4 层，Container(Surface), Surface Trait, State Layer 和 Content。
+      通过 4 层划分，统一了交互状态和深度阴影的规范，所有容器都可以添加交互状态或指定深度（阴影）。
+    </p>
+    <p>
+      Jinge Material 提供了内容框组件<code>md-content</code>，统一承接各类型的容器，通过不同的参数来控制交互状态或深度阴影。
     </p>
   </div>
   <div class="page-container-section">
-    <h2>内容框</h2>
+    <h2 class="md-headline-medium">内容框</h2>
     
     <CodeExample title="Content" e:example="_examples.paperContent" />
-
-    <ApiItem title="API - md-content">
-      <ApiTable e:headings="api.props.headings" e:props="api.props.props" slot-pass:props />
-    </ApiItem>
-
+    <h3 class="md-title-large">API - md-content</h3>
+    <ApiTable :props="api"/>
   </div>
 </PageContainer>

@@ -6,7 +6,7 @@ const locales = [
   },
   {
     locale: 'en',
-    name: 'English',
+    name: 'ENGLISH',
   },
 ];
 export default locales;

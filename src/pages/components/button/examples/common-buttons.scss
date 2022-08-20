@@ -1,0 +1,13 @@
+.demo {
+  padding: 0;
+
+  :global {
+    small {
+      display: block;
+    }
+
+    .md-button {
+      margin-bottom: 16px;
+    }
+  }
+}

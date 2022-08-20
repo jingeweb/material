@@ -1,7 +1,7 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { JingeComponentLoader, JingeTemplateLoader } = require('jinge-compiler');
-const { IconAlias } = require('jinge-material-icons/compiler');
+const { JingeSymbolsAlias } = require('jinge-symbols/compiler');
 const { MaterialAlias } = require('jinge-material/compiler');
 const { RouterAlias } = require('jinge-router/compiler');
 const { I18NAlias, JingeI18NLoader } = require('jinge-i18n/compiler');
@@ -19,7 +19,7 @@ function getScriptLoaders() {
         {
           use: [
             JingeComponentLoader,
-            JingeI18NLoader,
+            ...(process.env.WITH_I18N ? [JingeI18NLoader] : []),
             {
               loader: 'esbuild-loader',
               options: {
@@ -40,17 +40,21 @@ function getScriptLoaders() {
             componentAlias: {
               ...I18NAlias,
               ...MaterialAlias,
-              ...IconAlias,
+              ...JingeSymbolsAlias,
               ...RouterAlias,
             },
           },
         },
-        {
-          loader: JingeI18NLoader,
-          options: {
-            inlineTags: ['router-link:jinge-router:RouterLinkComponent'],
-          },
-        },
+        ...(process.env.WITH_I18N
+          ? [
+              {
+                loader: JingeI18NLoader,
+                options: {
+                  inlineTags: ['router-link:jinge-router:RouterLinkComponent'],
+                },
+              },
+            ]
+          : []),
       ],
     },
   ];

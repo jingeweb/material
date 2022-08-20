@@ -6,7 +6,7 @@ import _tpl from './page-container.html';
 export class PageContainer extends Component {
   static template = _tpl;
 
-   string;
+  _t: string;
   centered: boolean;
 
   constructor(

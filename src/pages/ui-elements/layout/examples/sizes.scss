@@ -1,5 +1,3 @@
-@import '~jinge-material/style/palette.scss';
-
 .demo {
   :global {
     .md-layout-item {
@@ -9,7 +7,7 @@
         width: 100%;
         height: 100%;
         display: block;
-        background: md-get-palette-color(green, 200);
+        background-color: var(--md-color-primary);
         content: ' ';
       }
     }

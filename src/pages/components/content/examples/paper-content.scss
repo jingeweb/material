@@ -1,7 +1,14 @@
 .demo {
-  :global(.md-content) {
-    width: 200px;
-    height: 200px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  :global(.md-container) {
+    margin-right: 16px;
+    margin-bottom: 16px;
+    padding: 16px;
+    width: 180px;
+    height: 180px;
     display: inline-flex;
     justify-content: center;
     align-items: center;

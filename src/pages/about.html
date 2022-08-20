@@ -4,12 +4,12 @@
 -->
 <PageContainer centered title="关于">
   <section class="page-container-section">
-    <h2 class="md-headline">Jinge Material</h2>
-    <strong>构建在 Jinge 框架上的 Material Design 组件库</strong>
+    <h2 class="md-headline-medium">Jinge Material</h2>
+    <p class="md-title-medium">构建在 Jinge 框架上的 Material Design 组件库</p>
   </section>
 
   <section class="page-container-section">
-    <h2 class="md-title">作者</h2>
+    <h2 class="md-headline-small">作者</h2>
     <div :class="style.authorCard">
       <div :class="style.authorCardInfo">
         <span>Yuhang Ge</span>
@@ -21,8 +21,8 @@
     </div>
   </section>
 
-  <section class="style.pageContainerSection">
-    <h2 class="md-title">项目介绍</h2>
+  <section class="page-container-section">
+    <h2 class="md-headline-small">项目介绍</h2>
     
     <p>
       在长期的业务项目研发中，我探索并开发了一个和主流 mvvm 框架的核心都不同的 <a target="_blank" href="https://github.com/YuhangGe/jinge">Jinge</a> 框架。为了验证这个框架的能力，我决定在这个框架上开发一个 UI 组件库。
@@ -37,5 +37,11 @@
       Jinge Material 在移植自 Vue Material 项目的过程中，同时也参考 <a href="https://ant.design" target="_blank">Ant Design</a> 和 <a href="https://element.eleme.cn/" target="_blank">Element</a> 等现代组件库，对项目的目录结构和各别组件的设计进行了重构。
     </p> 
     
+  </section>
+  <section class="page-container-section">
+    <h2 class="md-headline-small">Material Design 3</h2>
+    <p>
+      更新：Jinge Material 现已实现 Material Design 3 设计规范，大量重写了最初移植的 Vue Material 仓库的 sass 代码。
+    </p>
   </section>
 </PageContainer>

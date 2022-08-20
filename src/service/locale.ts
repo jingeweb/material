@@ -3,7 +3,6 @@ import en from 'jinge-material/locales/en';
 import { setLocale as setMaterialLocale } from 'jinge-material/config';
 import { getLocale, setLocale } from 'jinge-i18n';
 import { env } from './env';
-import { router } from './router';
 
 export type TargetLocale = 'en' | 'zh_cn';
 
@@ -26,11 +25,6 @@ export function setCurrentLocale(targetLocale: TargetLocale) {
    * 切换组件库语言资源
    */
   setMaterialLocale(targetLocale === 'en' ? en : zh_cn);
-  /**
-   * 设置 router 的 baseHref
-   */
-  const newBaseHref = `${env.baseHref}${targetLocale}/`;
-  router.baseHref = newBaseHref;
 
   const currentLocale = getLocale();
   if (targetLocale === currentLocale) {
@@ -39,9 +33,7 @@ export function setCurrentLocale(targetLocale: TargetLocale) {
   /**
    * 切换语言
    */
-  const oldBaseHrefRegExp = new RegExp('^' + `${env.baseHref}${currentLocale}/`);
   setLocale(targetLocale);
-  history.pushState(null, null, location.pathname.replace(oldBaseHrefRegExp, newBaseHref));
   localStorage.setItem(env.localeKey, targetLocale);
   env.locale = targetLocale;
 }

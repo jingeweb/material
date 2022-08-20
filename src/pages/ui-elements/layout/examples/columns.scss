@@ -1,20 +1,18 @@
-@import '~jinge-material/style/palette.scss';
-
 .demo {
   :global {
     .md-layout-item {
       height: 40px;
 
       &:nth-child(1) {
-        background: md-get-palette-color(grey, 300);
+        background-color: var(--md-color-primary);
       }
 
       &:nth-child(2) {
-        background: md-get-palette-color(grey, 400);
+        background-color: var(--md-color-secondary);
       }
 
       &:nth-child(3) {
-        background: md-get-palette-color(grey, 500);
+        background-color: var(--md-color-tertiary);
       }
     }
   }

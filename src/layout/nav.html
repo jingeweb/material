@@ -2,14 +2,15 @@
   import style from './nav.scss';
   import { NavContent } from './nav-content';
 -->
-<div :class="style.mainNavContainer">
-  <if e:expect="!isSplash">
-  <md-content :class="[style.mainNav, 'md-elevation-1']">
-    <NavContent/>
-  </md-content>
-  </if>
+<if e:expect="!isSplash">
+<div :class="[style.mainNav, 'md-body-large']">
+  <NavContent :class="style.mainNav"/>
+</div>
+</if>
+<!-- <div :class="style.mainNav"> -->
   
-
+  
+<!-- 
   <md-drawer fixed e:active="menuShown" on:closed="hideMenu">
     <md-toolbar class="md-transparent" elevation="0">
       <md-icon class="jinge-material-site-logo" style="font-size: 24px; margin: 0 0 0 8px;" src="assets/logo_nc.svg"/>
@@ -19,5 +20,5 @@
     <div :class="style.mainNavDrawerContent">
       <NavContent />
     </div>
-  </md-drawer>
-</div>
+  </md-drawer> -->
+<!-- </div> -->
